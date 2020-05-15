@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.0.5",
-  "description": "npm install -D eslint-config-prettier eslint-plugin-prettier",
+  "version": "1.0.6",
+  "description": "npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -28,6 +28,8 @@
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
