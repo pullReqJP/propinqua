@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "npm install next react react-dom",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/pullReqJP/propinqua/issues"
   },
-  "homepage": "https://github.com/pullReqJP/propinqua#readme"
+  "homepage": "https://github.com/pullReqJP/propinqua#readme",
+  "dependencies": {
+    "next": "^9.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
