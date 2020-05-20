@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/pullReqJP/propinqua#readme",
   "dependencies": {
+    "date-fns": "^2.14.0",
     "gray-matter": "^4.0.2",
     "next": "^9.4.0",
     "react": "^16.13.1",
