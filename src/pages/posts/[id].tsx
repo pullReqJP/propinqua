@@ -10,10 +10,14 @@ export default function Post({ postData }) {
       <br />
       {postData.date}
       <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className="blog"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
     </Layout>
   );
 }
+
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {

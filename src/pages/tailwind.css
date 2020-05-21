@@ -1,17 +1,45 @@
 @import "tailwindcss/base";
 
-/* ul */
+/* * */
 
-ul {
-  margin-left: 1em;
+* {
+  color: rgb(51, 51, 51);
 }
 
-ul > li::before {
-  content: "・";
-}
+/* blog */
 
-ul ul > li::before {
-  content: "-";
+.blog {
+  & h1 {
+    @apply px-4 py-2 rounded font-bold bg-gray-200 text-black;
+  }
+
+  & h2 {
+    @apply px-4 py-2 font-semibold text-black;
+  }
+
+  & ul {
+    margin-left: 1em;
+
+    & li {
+      position: relative;
+    }
+
+    & > li::before {
+      position: absolute;
+      top: 0.75em;
+      left: -2em;
+      content: "q";
+      font-family: Comfortaa;
+      font-size: 0.5em;
+      font-weight: 400;
+      transform: rotate(-90deg);
+    }
+
+    & ul > li::before {
+      content: "p";
+      font-weight: 300;
+    }
+  }
 }
 
 @import "tailwindcss/components";
