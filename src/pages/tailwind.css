@@ -1,3 +1,18 @@
 @import "tailwindcss/base";
+
+/* ul */
+
+ul {
+  margin-left: 1em;
+}
+
+ul > li::before {
+  content: "・";
+}
+
+ul ul > li::before {
+  content: "-";
+}
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
