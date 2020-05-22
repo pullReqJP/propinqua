@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
+    require("postcss-import")({
+      plugins: [require("stylelint")],
+    }),
     "tailwindcss",
     ...(process.env.NODE_ENV === "production"
       ? [

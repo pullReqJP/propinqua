@@ -28,16 +28,16 @@
       position: absolute;
       top: 0.75em;
       left: -2em;
-      content: "q";
-      font-family: Comfortaa;
+      font-family: Comfortaa, sans-serif;
       font-size: 0.5em;
       font-weight: 400;
+      content: "q";
       transform: rotate(-90deg);
     }
 
     & ul > li::before {
-      content: "p";
       font-weight: 300;
+      content: "p";
     }
   }
 }
