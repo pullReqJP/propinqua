@@ -3,17 +3,14 @@ import { getAllPostIds, getPostData } from "../../../lib/posts";
 
 export default function Post({ postData }) {
   return (
-    <Layout home>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      <br />
-      <div
-        className="blog"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+    <Layout>
+      <h1 className="border-b border-gray-700 text-3xl font-medium">
+        {postData.title}
+      </h1>
+      <div className="mb-6 text-color text-opacity-75 text-right">
+        {postData.date}
+      </div>
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   );
 }

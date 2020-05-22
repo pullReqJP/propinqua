@@ -2,42 +2,62 @@
 
 /* * */
 
-* {
-  color: rgb(51, 51, 51);
+body {
+  font-family: theme("fontFamily.body");
+  @apply font-light;
+  @apply text-color;
+  @apply bg-gray-200;
 }
 
-/* blog */
+.text-color {
+  color: rgba(51, 51, 51, var(--text-opacity));
+  --text-opacity: 1;
+}
 
-.blog {
-  & h1 {
-    @apply px-4 py-2 rounded font-bold bg-gray-200 text-black;
+.font-pq {
+  font-family: theme("fontFamily.display");
+}
+
+ul {
+  margin-left: 1em;
+
+  & li {
+    position: relative;
   }
 
-  & h2 {
-    @apply px-4 py-2 font-semibold text-black;
-  }
+  & > li::before {
+    position: absolute;
+    top: 0.75em;
+    left: -2em;
+    @apply font-pq;
+    font-size: 0.5em;
+    font-weight: 400;
+    content: "q";
+    transform: rotate(-90deg);
 
-  & ul {
-    margin-left: 1em;
-
-    & li {
-      position: relative;
-    }
-
-    & > li::before {
-      position: absolute;
-      top: 0.75em;
-      left: -2em;
-      font-family: Comfortaa, sans-serif;
-      font-size: 0.5em;
-      font-weight: 400;
-      content: "q";
-      transform: rotate(-90deg);
-    }
-
-    & ul > li::before {
+    @nest ul & {
       font-weight: 300;
       content: "p";
+
+      @nest ul & {
+        content: "r";
+
+        @nest ul & {
+          content: "l";
+
+          @nest ul & {
+            content: "u";
+
+            @nest ul & {
+              content: "e";
+
+              @nest ul & {
+                content: "l";
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
