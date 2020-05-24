@@ -1,9 +1,9 @@
-import Layout from "../components/layout";
-import Head from "next/head";
-import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
-import Date from "../components/date";
-import { getSortedPostsData } from "../../lib/posts";
+import Layout from '../components/layout';
+import Head from 'next/head';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
+import Date from '../components/date';
+import { getSortedPostsData } from '../../lib/posts';
 
 export default function Home({ allPostsData }) {
   console.log(allPostsData);
