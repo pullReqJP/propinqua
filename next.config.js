@@ -1,7 +1,7 @@
-require("dotenv").config();
+require('dotenv').config();
 
 module.exports = {
   env: {
-    assetPrefix: process.env.GITHUB_PAGES ? "/propinqua" : "",
+    assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
   },
 };
