@@ -6,7 +6,7 @@ import Date from '../components/date';
 import { getSortedPostsData } from '../../lib/posts';
 
 export default function Home({ allPostsData }) {
-  console.log(allPostsData);
+  // console.log(allPostsData);
   return (
     <Layout>
       <Head>…</Head>

@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+console.log(process.env.GITHUB_PAGES);
 module.exports = {
   env: {
     assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
