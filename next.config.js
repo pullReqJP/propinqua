@@ -17,7 +17,8 @@ module.exports = {
 
     return paths;
   },
-  env: {
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
-  },
+  // env: {
+  //   assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+  // },
+  assetPrefix: '/propinqua',
 };
