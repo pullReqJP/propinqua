@@ -24,8 +24,8 @@ module.exports = {
 
   // assetPrefix: '/propinqua',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
-  linkPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
-  // publicRuntimeConfig: {
-  //   // used in '/components/Link.js/', for more details go to the component itself
-  // },
+  publicRuntimeConfig: {
+    // used in '/components/Link.js/', for more details go to the component itself
+    linkPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+  },
 };
