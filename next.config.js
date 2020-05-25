@@ -7,7 +7,7 @@ module.exports = {
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
-      '/posts': { page: '/posts' },
+      // '/posts': { page: '/posts' },
     };
     // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
     // const data = await res.json();
