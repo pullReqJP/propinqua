@@ -6,12 +6,12 @@ on:
       - master
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: setup node
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -24,11 +24,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npm ci
-      - run: npm run build
+      - name: install
+        run: yarn install --frozen-lockfile
 
-      - name: Deploy
+      - name: build
+        run: yarn build
+
+      - name: export
+        run: yarn export
+
+      - name: add nojekyll
+        run: touch ./out/.nojekyll
+
+      - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./out
