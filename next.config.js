@@ -20,5 +20,7 @@ module.exports = {
   // env: {
   //   assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
   // },
-  assetPrefix: '/propinqua',
+
+  // assetPrefix: '/propinqua',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
 };
