@@ -2,9 +2,6 @@ require('dotenv').config();
 
 console.log(process.env.NODE_ENV);
 module.exports = {
-  env: {
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
-  },
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
@@ -19,5 +16,8 @@ module.exports = {
     // });
 
     return paths;
+  },
+  env: {
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
   },
 };
