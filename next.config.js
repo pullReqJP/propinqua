@@ -6,7 +6,7 @@ module.exports = {
     const paths = {
       '/': { page: '/' },
       // '/posts': { page: '/posts' },
-      '/posts/${id}': { page: '/posts/[id]' },
+      // '/posts/${id}': { page: '/posts/[id]' },
     };
     // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
     // const data = await res.json();
@@ -24,4 +24,8 @@ module.exports = {
 
   // assetPrefix: '/propinqua',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+  publicRuntimeConfig: {
+    // used in '/components/Link.js/', for more details go to the component itself
+    linkPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+  },
 };
