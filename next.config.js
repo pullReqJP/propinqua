@@ -1,9 +1,9 @@
 require('dotenv').config();
 
 module.exports = {
-  env: {
-    assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
-  },
+  // env: {
+  //   assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
+  // },
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
