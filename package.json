@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.1.1",
-  "description": "build on github",
+  "version": "1.1.2",
+  "description": "basePath",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -26,7 +26,6 @@
     "dotenv": "^8.2.0",
     "gray-matter": "^4.0.2",
     "next": "^9.4.0",
-    "next-server": "^9.0.5",
     "postcss-nesting": "^7.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

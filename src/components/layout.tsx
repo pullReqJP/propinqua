@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import B from '../../lib/basepath';
 
 export default function Layout({ children }) {
   return (
@@ -8,7 +9,7 @@ export default function Layout({ children }) {
       </header>
       <main className="self-center md:max-w-screen-md lg:max-w-screen-lg m-4 p-4 rounded shadow bg-white">
         {children}
-        <Link href="/">
+        <Link href={B('/')}>
           <a>← Back to home</a>
         </Link>
       </main>

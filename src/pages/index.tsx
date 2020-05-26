@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Date from '../components/date';
 import { getSortedPostsData } from '../../lib/posts';
+import B from '../../lib/basepath';
 
 export default function Home({ allPostsData }) {
   // console.log(allPostsData);
@@ -16,7 +17,7 @@ export default function Home({ allPostsData }) {
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <Link href="/posts/[id]" as={B(`/posts/${id}`)}>
                 <a>{title}</a>
               </Link>
               <br />
