@@ -18,6 +18,10 @@ body {
   font-family: theme('fontFamily.display');
 }
 
+h1 {
+  @apply text-3xl font-medium;
+}
+
 :not(nav) > {
   & ul {
   margin-left: 1em;
