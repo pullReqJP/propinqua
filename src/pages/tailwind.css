@@ -18,7 +18,8 @@ body {
   font-family: theme('fontFamily.display');
 }
 
-ul {
+:not(nav) > {
+  & ul {
   margin-left: 1em;
 
   & li {
@@ -60,6 +61,7 @@ ul {
       }
     }
   }
+}
 }
 
 @import 'tailwindcss/components';
