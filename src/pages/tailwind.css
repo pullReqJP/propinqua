@@ -5,8 +5,7 @@
 body {
   font-family: theme('fontFamily.body');
   @apply font-light;
-  @apply text-color;
-  @apply bg-gray-200;
+  @apply apple-text-black;
 }
 
 .text-color {
@@ -24,40 +23,41 @@ h1 {
 
 :not(nav) > {
   & ul {
-  margin-left: 1em;
+    margin-left: 1em;
 
-  & li {
-    position: relative;
-  }
+    & li {
+      position: relative;
+    }
 
-  & > li::before {
-    position: absolute;
-    top: 0.75em;
-    left: -2em;
-    font-size: 0.5em;
-    font-weight: 400;
-    content: 'q';
-    transform: rotate(-90deg);
-    @apply font-pq;
-
-    @nest ul & {
-      font-weight: 300;
-      content: 'p';
+    & > li::before {
+      position: absolute;
+      top: 0.75em;
+      left: -2em;
+      font-size: 0.5em;
+      font-weight: 400;
+      content: 'q';
+      transform: rotate(-90deg);
+      @apply font-pq;
 
       @nest ul & {
-        content: 'r';
+        font-weight: 300;
+        content: 'p';
 
         @nest ul & {
-          content: 'l';
+          content: 'r';
 
           @nest ul & {
-            content: 'u';
+            content: 'l';
 
             @nest ul & {
-              content: 'e';
+              content: 'u';
 
               @nest ul & {
-                content: 'l';
+                content: 'e';
+
+                @nest ul & {
+                  content: 'l';
+                }
               }
             }
           }
@@ -66,6 +66,34 @@ h1 {
     }
   }
 }
+
+/* Apple */
+
+.apple-text-white {
+  color: rgba(245, 245, 247, var(--text-opacity));
+  --text-opacity: 1;
+}
+
+.apple-text-gray {
+  color: rgba(134, 134, 139, var(--text-opacity));
+  --text-opacity: 1;
+}
+
+.apple-text-black {
+  color: rgba(29, 29, 31, var(--text-opacity));
+  --text-opacity: 1;
+}
+
+.apple-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  @apply apple-text-white;
 }
 
 @import 'tailwindcss/components';
