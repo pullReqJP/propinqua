@@ -62,7 +62,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
           <li>
             <Link href={B('/')}>
-              <a className="text-3xl">pullReq</a>
+              <a className="text-2xl">pullReq</a>
             </Link>
           </li>
           <li />

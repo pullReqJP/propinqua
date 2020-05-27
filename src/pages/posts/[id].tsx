@@ -4,7 +4,7 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 export default function Post({ postData }) {
   return (
     <Layout>
-      <main className="self-center md:max-w-screen-md lg:max-w-screen-lg m-4 p-4 rounded shadow bg-white">
+      <div className="md:max-w-screen-md lg:max-w-screen-lg m-4 p-4 rounded shadow bg-white">
         <h1 className="border-b border-gray-700 text-3xl font-medium">
           {postData.title}
         </h1>
@@ -12,7 +12,7 @@ export default function Post({ postData }) {
           {postData.date}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </main>
+      </div>
     </Layout>
   );
 }
