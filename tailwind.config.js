@@ -4,14 +4,14 @@ module.exports = {
     extend: {
       fontFamily: {
         body: [
-          "Hiragino Sans",
-          "Hiragino Kaku Gothic ProN",
-          "ヒラギノ角ゴ ProN W3",
-          "Meiryo",
-          "メイリオ",
-          "sans-serif",
+          'Hiragino Sans',
+          'Hiragino Kaku Gothic ProN',
+          'ヒラギノ角ゴ ProN W3',
+          'Meiryo',
+          'メイリオ',
+          'sans-serif',
         ],
-        display: ["Comfortaa", "sans-serif"],
+        display: ['Comfortaa', 'sans-serif'],
       },
     },
   },
