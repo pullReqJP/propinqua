@@ -22,6 +22,7 @@ module.exports = {
         '3': '0.75rem',
         '4': '1rem',
         '6': '1.5rem',
+        '-full': '-100%',
       },
       rotate: {
         '-135': '-135deg',

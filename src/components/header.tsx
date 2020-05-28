@@ -28,6 +28,29 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     console.log(this.state);
   }
 
+  SubMenu = () => (
+    <nav
+      className={
+        this.state.isChecked
+          ? 'absolute left-0 duration-300'
+          : 'absolute -left-full duration-300'
+      }
+    >
+      <ul className="bg-black bg-opacity-75 divide-y divide-black">
+        <li className="px-4 py-1">
+          <Link href={B('/test')}>
+            <a className="text-xl">test</a>
+          </Link>
+        </li>
+        <li className="px-4 py-1">
+          <Link href={B('/information')}>
+            <a className="text-xl">information</a>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+
   render() {
     var menuicon: string;
     menuicon =
@@ -35,7 +58,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     return (
       <nav className="apple-menu font-pq">
         <ul className="flex items-baseline justify-between px-4 py-1">
-          <li className="my-auto">
+          <li className="my-auto md:hidden">
             <input
               type="checkbox"
               name="hidden"
@@ -67,15 +90,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
           <li />
         </ul>
-        {/* <Link href={B('/')}>
-          <a className="text-3xl">pullReq</a>
-        </Link>
-        <Link href={B('/product')}>
-          <a className="text-xl">product</a>
-        </Link>
-        <Link href={B('/information')}>
-          <a className="text-xl">information</a>
-        </Link> */}
+        <this.SubMenu />
       </nav>
     );
   }
