@@ -65,11 +65,21 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     <nav
       className={
         this.state.isChecked
-          ? 'absolute left-0 duration-300'
-          : 'absolute -left-full duration-300'
+          ? 'absolute top-12 left-0 duration-300'
+          : 'absolute top-12 -left-full duration-300 md:relative md:inline-block md:left-auto md:top-0'
       }
     >
-      <ul className="bg-black bg-opacity-75 divide-y divide-black">
+      <ul
+        className="
+        bg-black
+        bg-opacity-75
+        divide-y
+        divide-black
+        md:flex
+        md:bg-opacity-0
+        md:divide-y-0
+        "
+      >
         <li className="px-4 py-1">
           <Link href={B('/product')}>
             <a className="text-xl">product</a>
@@ -91,14 +101,15 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           <li className="my-auto md:hidden">
             <this.MenuIcon />
           </li>
+          <li className="hidden md:inline-block" />
           <li>
             <Link href={B('/')}>
               <a className="text-2xl">pullReq</a>
             </Link>
           </li>
+          <this.SubMenu />
           <li />
         </ul>
-        <this.SubMenu />
       </nav>
     );
   }

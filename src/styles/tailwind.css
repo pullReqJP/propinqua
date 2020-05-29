@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  @apply text-3xl font-medium;
+  @apply pt-6 text-3xl font-medium;
 }
 
 :not(nav) > {
