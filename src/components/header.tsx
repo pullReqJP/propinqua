@@ -12,7 +12,7 @@ type HeaderState = {
 export default class Header extends React.Component<HeaderProps, HeaderState> {
   constructor(props) {
     super(props);
-    console.log('constructor');
+    console.log('Header');
     this.state = {
       isToggleOn: true,
       isChecked: false,
@@ -71,8 +71,8 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     >
       <ul className="bg-black bg-opacity-75 divide-y divide-black">
         <li className="px-4 py-1">
-          <Link href={B('/test')}>
-            <a className="text-xl">test</a>
+          <Link href={B('/product')}>
+            <a className="text-xl">product</a>
           </Link>
         </li>
         <li className="px-4 py-1">
