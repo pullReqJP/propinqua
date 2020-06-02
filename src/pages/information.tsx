@@ -103,12 +103,15 @@ export default class Information extends React.Component<Props, State> {
               // console.log(keyPrefix + '-' + data.key);
               // console.log(data);
               // console.log(data.key);
+              console.log('valueLoop');
               console.log(data.value);
-              // console.log(...data.value);
+              let valueLoop = this.ValueLoop(data.value);
+              console.log(valueLoop);
               return (
                 <>
                   <div key={keyPrefix + '-' + data.key}>{data.key}</div>
-                  <div key={keyPrefix + '-' + data.value}>{data.value}</div>
+                  {valueLoop}
+                  {/* <div key={keyPrefix + '-' + data.value}>{data.value}</div> */}
                   {/* <this.ValueLoop {data.value, keyPrefix} /> */}
                 </>
               );
@@ -121,12 +124,23 @@ export default class Information extends React.Component<Props, State> {
     return <>{elm}</>;
   };
 
-  // ValueLoop = (key, value) => {
-  //   console.log('ValueLoop');
-  //   // console.log(key);
-  //   console.log(value);
-  //   return <div key={key + '-' + value[0]}></div>;
-  // };
+  ValueLoop = (value) => {
+    console.log(Array.isArray(value));
+    if (Array.isArray(value)) {
+      console.log(...value);
+      value.map((subValue) => {
+        console.log('subValue');
+        console.log(subValue);
+        this.ValueLoop(subValue);
+      });
+    } else {
+      return <div key={value}>{value}</div>;
+    }
+    // Array.isArray(value);
+    // console.log('ValueLoop');
+    // console.log(key);
+    // console.log(value);
+  };
 
   // for (var pI in this.plrqInfo[i]) {
   //   elm.push(this.SubLoop(this.plrqInfo[i], pI));
