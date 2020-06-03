@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Layout from '../components/layout';
 
 type Props = {
@@ -72,107 +72,54 @@ export default class Information extends React.Component<Props, State> {
     this.state = {};
   }
 
+  // this.plrqInfo → 配列 → JSX.Element
   InfoLoop = () => {
     console.log('InfoLoop');
     var h2: string[] = [];
     var h3: string[] = [];
-    var h4: string[] = [];
     var elm = [];
 
     h2 = Object.keys(this.plrqInfo);
-    // console.log(h2); //["会社概要"]
     h2.forEach((h2_value) => {
-      // console.log(h2_value);
       h3 = Object.keys(this.plrqInfo[h2_value]);
-      // console.log(h3); //(3) ["会社概要_01", "会社概要_02", "会社概要_03"]
       h3.forEach((h3_value) => {
-        // console.log(h3_value);
-        // console.log(this.plrqInfo[h2_value][h3_value]);
-        h4 = Object.keys(this.plrqInfo[h2_value][h3_value]);
-        // console.log(h4);
-        // h4.forEach((h4_value) => {
-        //   // console.log(this.plrqInfo[h2_value][h3_value][h4_value]);
-        //   // console.log(this.plrqInfo[h2_value][h3_value][h4_value].key);
-        //   // console.log(h4_value);
-        //   return <div>{this.plrqInfo[h2_value][h3_value][h4_value].key}</div>;
-        // });
         elm.push(
           this.plrqInfo[h2_value][h3_value].map(
             (data: { value: any; key: string }) => {
               var keyPrefix: any = h2_value + '-' + h3_value;
-              // console.log(keyPrefix + '-' + data.key);
-              // console.log(data);
-              // console.log(data.key);
               console.log('valueLoop');
               console.log(data.value);
               let valueLoop = this.ValueLoop(data.value);
-              console.log(valueLoop);
               return (
-                <>
+                <Fragment key={keyPrefix + '+' + data.key}>
                   <div key={keyPrefix + '-' + data.key}>{data.key}</div>
                   {valueLoop}
-                  {/* <div key={keyPrefix + '-' + data.value}>{data.value}</div> */}
-                  {/* <this.ValueLoop {data.value, keyPrefix} /> */}
-                </>
+                </Fragment>
               );
             }
           )
         );
-      });
-    });
+      }); //h3.forEach
+    }); //h2.forEach
 
     return <>{elm}</>;
-  };
+  }; //InfoLoop()
 
+  // 配列 → JSX.Element
   ValueLoop = (value) => {
-    console.log(Array.isArray(value));
+    var elm = [];
+    var key: string = '';
     if (Array.isArray(value)) {
-      console.log(...value);
+      // 配列の場合は再帰呼び出し
       value.map((subValue) => {
-        console.log('subValue');
-        console.log(subValue);
-        this.ValueLoop(subValue);
+        key += subValue;
+        elm.push(this.ValueLoop(subValue));
       });
+      return <div key={key}>{elm}</div>;
     } else {
       return <div key={value}>{value}</div>;
     }
-    // Array.isArray(value);
-    // console.log('ValueLoop');
-    // console.log(key);
-    // console.log(value);
-  };
-
-  // for (var pI in this.plrqInfo[i]) {
-  //   elm.push(this.SubLoop(this.plrqInfo[i], pI));
-  // }
-
-  // SubLoop = (info, no) => {
-  //   console.log('SubLoop');
-  //   var elm = [];
-
-  //   for (var j in info[no]) {
-  //     console.log(info[no][j]);
-  //     elm.push(
-  //       <div key={no + j + '-left'} className="text-right col-span-1">
-  //         {info[no][j].key}
-  //       </div>
-  //     );
-  //     elm.push(
-  //       <div key={no + j + '-right'} className="col-span-2">
-  //         {info[no][j].value}
-  //       </div>
-  //     );
-  //   }
-
-  //   return (
-  //     <div
-  //       key={no}
-  //       className="mt-6 grid grid-cols-3 row-gap-2 col-gap-6 leading-none"
-  //     >
-  //       {elm}
-  //     </div>
-  //   );
-  // };
+  }; //ValueLoop()
 
   render() {
     return (
