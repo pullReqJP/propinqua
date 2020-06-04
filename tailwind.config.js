@@ -28,6 +28,9 @@ module.exports = {
       rotate: {
         '-135': '-135deg',
       },
+      zIndex: {
+        '-10': '-10',
+      },
     },
   },
   variants: {},

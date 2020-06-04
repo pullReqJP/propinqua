@@ -10,19 +10,35 @@ export default class Sample extends React.Component<Props, State> {
   render() {
     return (
       <Layout>
+        <div className="absolute w-full h-full top-0 left-0 -z-10">
+          <motion.div
+            className="w-full h-full"
+            animate={{
+              backgroundColor: ['#0000ff', '#0000ff', '#0000ff'],
+              skew: [90, 90, 160],
+              originX: -0.5,
+              originY: -0.55,
+            }}
+            transition={{
+              duration: 4,
+              times: [0, 0.9, 1],
+            }}
+          />
+        </div>
         <div className="inline-block mt-48 text-6xl font-pq">
           <motion.div
             // className="font-pq"
             animate={{
               // scale: [1, 2, 2, 1, 1],
-              rotate: [0, 180],
+              color: ['#000000', '#000000', '#ff0000'],
+              rotate: [0, 180, 180],
               originX: 2.7,
               originY: 0.52,
             }}
             transition={{
               duration: 4,
               // ease: 'easeInOut',
-              times: [0, 1],
+              times: [0, 0.8, 1],
               // loop: Infinity,
               repeatDelay: 1,
             }}
@@ -30,20 +46,33 @@ export default class Sample extends React.Component<Props, State> {
             p
           </motion.div>
         </div>
-        <div className="inline-block text-6xl font-pq">ullRe</div>
+        <div className="inline-block text-6xl font-pq">
+          <motion.div
+            animate={{
+              color: ['#000000', '#000000', '#ff0000'],
+            }}
+            transition={{
+              duration: 4,
+              times: [0, 0.8, 1],
+            }}
+          >
+            ullRe
+          </motion.div>
+        </div>
         <div className="inline-block mt-48 text-6xl font-pq">
           <motion.div
             // className="font-pq"
             animate={{
               // scale: [1, 2, 2, 1, 1],
-              rotate: [0, 180],
+              color: ['#000000', '#000000', '#ff0000'],
+              rotate: [0, 180, 180],
               originX: -1.7,
               originY: 0.53,
             }}
             transition={{
               duration: 4,
               // ease: 'easeInOut',
-              times: [0, 1],
+              times: [0, 0.8, 1],
               // loop: Infinity,
               repeatDelay: 1,
             }}
