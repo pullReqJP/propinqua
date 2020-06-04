@@ -90,6 +90,11 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <a className="text-xl">information</a>
           </Link>
         </li>
+        <li className="px-4 py-1">
+          <Link href={B('/sample')}>
+            <a className="text-xl">sample</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
