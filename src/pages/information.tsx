@@ -21,46 +21,58 @@ export default class Information extends React.Component<Props, State> {
     会社概要: {
       会社概要_01: [
         {
-          key: '社名',
+          key: '会社名',
           value: ['株式会社 プルリク', '（Pullreq limited）'],
+        },
+        {
+          key: '設立年月',
+          value: ['２０２０年６月１日'],
         },
         {
           key: '所在地',
           value: [
             '〒４６５ー００３４',
             '愛知県名古屋市名東区高柳町２０２番地',
-            ['TEL', '０５２ー２６５ー９８３１'],
-            ['FAX', '０５２ー２６５ー９８３２'],
-            ['mail', 'info@p-req.com'],
+            // ['TEL', '０５２ー２６５ー９８３１'],
+            // ['FAX', '０５２ー２６５ー９８３２'],
+            // ['mail', 'info@p-req.com'],
           ],
         },
+        {
+          key: '資本金',
+          value: ['５００万円'],
+        },
+        // {
+        //   key: '取引銀行',
+        //   value: '○○銀行',
+        // },
+        // {
+        //   key: '取引先企業名',
+        //   value: 'メディアウェイブシステムズ株式会社',
+        // },
       ],
       会社概要_02: [
         {
-          key: '代表者',
-          value: ['代表取締役', '牛嶋　一樹'],
+          key: '役員紹介',
+          value: [
+            ['代表取締役', '牛嶋　一樹'],
+            ['取締役', '坪井　健'],
+          ],
         },
         {
-          key: '役員',
-          value: ['取締役', '坪井　健'],
+          key: '従業員数',
+          value: '５名',
         },
       ],
       会社概要_03: [
         {
-          key: '資本金',
-          value: '５００万円',
-        },
-        {
-          key: '取引銀行',
-          value: '○○銀行',
-        },
-        {
-          key: '取引先企業名',
-          value: 'メディアウェイブシステムズ株式会社',
-        },
-        {
-          key: '設立年月',
-          value: '２０２０年６月１日',
+          key: '事業内容',
+          value: [
+            '①ITシステム及びソフトウェアの企画、開発、販売 ',
+            '②情報通信機器及び情報通信役務の企画、開発、販売',
+            '③ITを利用したイベント及びセールスプロモーションの企画、実施',
+            '④電気通信事業法に基づく電気通信事業',
+          ],
         },
       ],
     },
@@ -77,7 +89,7 @@ export default class Information extends React.Component<Props, State> {
     console.log('InfoLoop');
     var h2: string[] = [];
     var h3: string[] = [];
-    var elm = [];
+    var elm: JSX.Element[] = [];
 
     h2 = Object.keys(this.plrqInfo);
     h2.forEach((h2_value) => {
@@ -102,7 +114,11 @@ export default class Information extends React.Component<Props, State> {
       }); //h3.forEach
     }); //h2.forEach
 
-    return <>{elm}</>;
+    return (
+      <div key={'InfoLoop'} className="pq-grid-1-3">
+        {elm}
+      </div>
+    );
   }; //InfoLoop()
 
   // 配列 → JSX.Element

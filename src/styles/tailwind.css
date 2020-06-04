@@ -69,6 +69,30 @@ h1 {
   }
 }
 
+.pq-grid-1-3 {
+  @apply grid grid-cols-4 col-gap-4 row-gap-2 leading-tight;
+
+  & > div:nth-child(odd) {
+    @apply col-span-1 text-right;
+  }
+
+  & > div:nth-child(even) {
+    @apply col-span-3;
+
+    & > div {
+      /* @apply grid grid-cols-2 col-gap-4; */
+
+      & > div:nth-child(odd) {
+        /* @apply col-span-1 text-right; */
+      }
+
+      & > div:nth-child(even) {
+        /* @apply col-span-1; */
+      }
+    }
+  }
+}
+
 /* Apple */
 
 .apple-text-white {
