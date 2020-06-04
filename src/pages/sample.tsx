@@ -10,38 +10,78 @@ export default class Sample extends React.Component<Props, State> {
   render() {
     return (
       <Layout>
-        <div>
+        <div className="inline-block mt-48 text-6xl font-pq">
+          <motion.div
+            // className="font-pq"
+            animate={{
+              // scale: [1, 2, 2, 1, 1],
+              rotate: [0, 180],
+              originX: 2.7,
+              originY: 0.52,
+            }}
+            transition={{
+              duration: 4,
+              // ease: 'easeInOut',
+              times: [0, 1],
+              // loop: Infinity,
+              repeatDelay: 1,
+            }}
+          >
+            p
+          </motion.div>
+        </div>
+        <div className="inline-block text-6xl font-pq">ullRe</div>
+        <div className="inline-block mt-48 text-6xl font-pq">
+          <motion.div
+            // className="font-pq"
+            animate={{
+              // scale: [1, 2, 2, 1, 1],
+              rotate: [0, 180],
+              originX: -1.7,
+              originY: 0.53,
+            }}
+            transition={{
+              duration: 4,
+              // ease: 'easeInOut',
+              times: [0, 1],
+              // loop: Infinity,
+              repeatDelay: 1,
+            }}
+          >
+            q
+          </motion.div>
+        </div>
+        {/* <div className="mt-16">
           <motion.div
             className="font-pq"
             animate={{
               scale: [1, 2, 2, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+              // originX: 2,
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
             pullReq
           </motion.div>
-        </div>
-        <div className="mt-16">
+        </div> */}
+        {/* <div className="mt-16">
           <motion.div
             className="font-pq inline-block"
             animate={{
               scale: [1, 2, 2, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -50,15 +90,14 @@ export default class Sample extends React.Component<Props, State> {
           <motion.div
             className="font-pq inline-block"
             animate={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 0.5, 0.5, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -67,15 +106,14 @@ export default class Sample extends React.Component<Props, State> {
           <motion.div
             className="font-pq inline-block"
             animate={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 0.5, 0.5, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -84,15 +122,14 @@ export default class Sample extends React.Component<Props, State> {
           <motion.div
             className="font-pq inline-block"
             animate={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 0.5, 0.5, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -101,15 +138,14 @@ export default class Sample extends React.Component<Props, State> {
           <motion.div
             className="font-pq inline-block"
             animate={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 0.5, 0.5, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -118,15 +154,14 @@ export default class Sample extends React.Component<Props, State> {
           <motion.div
             className="font-pq inline-block"
             animate={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 0.5, 0.5, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
@@ -137,19 +172,18 @@ export default class Sample extends React.Component<Props, State> {
             animate={{
               scale: [1, 2, 2, 1, 1],
               rotate: [0, 0, 360, 180, 0],
-              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
             }}
             transition={{
               duration: 5,
               ease: 'easeInOut',
               times: [0, 0.2, 0.5, 0.8, 1],
-              loop: Infinity,
+              // loop: Infinity,
               repeatDelay: 1,
             }}
           >
             q
           </motion.div>
-        </div>
+        </div> */}
       </Layout>
     );
   }
