@@ -108,7 +108,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             </Link>
           </li>
           <this.SubMenu />
-          <li />
+          <li className="w-6" />
         </ul>
       </nav>
     );
