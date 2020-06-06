@@ -52,13 +52,13 @@ export default class Information extends React.Component<Props, State> {
         // },
       ],
       会社概要_02: [
-        {
-          key: '役員紹介',
-          value: [
-            ['代表取締役', '牛嶋　一樹'],
-            ['取締役', '坪井　健'],
-          ],
-        },
+        // {
+        //   key: '役員紹介',
+        //   value: [
+        //     ['代表取締役', '牛嶋　一樹'],
+        //     ['取締役', '坪井　健'],
+        //   ],
+        // },
         {
           key: '従業員数',
           value: '５名',
