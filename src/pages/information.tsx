@@ -61,7 +61,7 @@ export default class Information extends React.Component<Props, State> {
         },
         {
           key: '従業員数',
-          value: '５名',
+          value: '6名',
         },
       ],
       会社概要_03: [
