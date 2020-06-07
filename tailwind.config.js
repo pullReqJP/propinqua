@@ -31,6 +31,9 @@ module.exports = {
       zIndex: {
         '-10': '-10',
       },
+      strokeWidth: {
+        '3': '3',
+      },
     },
   },
   variants: {},

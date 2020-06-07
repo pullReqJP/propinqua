@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--Generator: Gravit.io-->
 <svg
+    class="stroke-current stroke-2"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     style="isolation:isolate"
@@ -14,22 +15,19 @@
     </defs>
     <g clip-path="url(#_clipPath_SfQSjL10Djq9nmZQwYlb3xsHti613jtZ)">
         <circle
+            vector-effect="non-scaling-stroke"
             cx="500" cy="299" r="165"
             fill="none"
-            stroke-width="68"
-            stroke="rgb(0,0,0)"
         />
         <circle
+            vector-effect="non-scaling-stroke"
             cx="731" cy="701" r="165"
             fill="none"
-            stroke-width="68"
-            stroke="rgb(0,0,0)"
         />
         <circle
+            vector-effect="non-scaling-stroke"
             cx="269" cy="701" r="165"
             fill="none"
-            stroke-width="68"
-            stroke="rgb(0,0,0)"
         />
     </g>
 </svg>

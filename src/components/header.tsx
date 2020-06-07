@@ -82,24 +82,22 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         "
       >
         <li className="px-4 py-1">
-          <IconService
-            width={50}
-            height={50}
-            // color={'#000'}
-          />
+          <IconService width={'1.25rem'} height={'1.25rem'} />
           {/* <Link href={B('/product')}>
             <a className="text-xl">product</a>
           </Link> */}
         </li>
         <li className="px-4 py-1">
-          <Link href={B('/information')}>
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+          {/* <Link href={B('/information')}>
             <a className="text-xl">information</a>
-          </Link>
+          </Link> */}
         </li>
         <li className="px-4 py-1">
-          <Link href={B('/sample')}>
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+          {/* <Link href={B('/sample')}>
             <a className="text-xl">sample</a>
-          </Link>
+          </Link> */}
         </li>
       </ul>
     </nav>
@@ -108,7 +106,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
       <nav className="apple-menu font-pq">
-        <ul className="flex items-baseline justify-between px-4 py-1">
+        <ul className="flex items-center justify-between px-4 py-1">
           <li className="my-auto md:hidden">
             <this.MenuIcon />
           </li>
