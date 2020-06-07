@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import B from '../../lib/basepath';
+import IconService from 'react-svg-loader!./icon_service.svg';
 
 type HeaderProps = {};
 
@@ -81,9 +82,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         "
       >
         <li className="px-4 py-1">
-          <Link href={B('/product')}>
+          <IconService
+            width={50}
+            height={50}
+            // color={'#000'}
+          />
+          {/* <Link href={B('/product')}>
             <a className="text-xl">product</a>
-          </Link>
+          </Link> */}
         </li>
         <li className="px-4 py-1">
           <Link href={B('/information')}>
