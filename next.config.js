@@ -2,6 +2,13 @@ require('dotenv').config();
 
 console.log(process.env.NODE_ENV);
 module.exports = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: 'raw-loader',
+    });
+    return config;
+  },
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },

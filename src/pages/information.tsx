@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Layout from '../components/layout';
-
+export const config = { amp: true };
 type Props = {
   // plrqInfo: {
   //   [会社概要: string]: {
