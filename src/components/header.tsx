@@ -29,6 +29,27 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     console.log(this.state);
   }
 
+  MenuService = () => {
+    return (
+      <div className="menu-icon relative">
+        <Link href={B('/service')}>
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+        </Link>
+        <div className="menu-toggle">
+          <Link href={B('/service#hp')}>
+            <a className="menu-link">HP</a>
+          </Link>
+          <Link href={B('/service#system')}>
+            <a className="menu-link">system</a>
+          </Link>
+          <Link href={B('/service#hikari')}>
+            <a className="menu-link">hikari</a>
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
   MenuIcon = () => {
     var menuicon: string;
     menuicon =
@@ -106,7 +127,20 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
       <nav className="apple-menu font-pq">
-        <ul className="flex items-center justify-between px-4 py-1">
+        <ul className="grid grid-cols-8">
+          <li className="col-start-4 col-span-2 text-center">
+            <Link href={B('/')}>
+              <a className="text-2xl">pullReq</a>
+            </Link>
+          </li>
+          <li className="col-span-3">
+            <div className="flex justify-around h-full">
+              <this.MenuService />
+              <this.MenuService />
+            </div>
+          </li>
+        </ul>
+        {/* <ul className="flex items-center justify-between px-4 py-1">
           <li className="my-auto md:hidden">
             <this.MenuIcon />
           </li>
@@ -118,7 +152,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
           <this.SubMenu />
           <li className="w-6" />
-        </ul>
+        </ul> */}
       </nav>
     );
   }
