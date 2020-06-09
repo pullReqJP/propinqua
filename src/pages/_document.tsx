@@ -1,25 +1,25 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import outputcss from '!raw-loader!../styles/output.css';
+// import outputcss from '!raw-loader!../styles/output.css';
 
 type Props = {};
 
 class MyDocument extends Document<Props> {
-  static async getInitialProps(ctx: any) {
-    const page = ctx.renderPage((App) => (props) => <App {...props} />);
-    const initialProps: any = await Document.getInitialProps(ctx);
-    return {
-      ...page,
-      styles: [
-        ...initialProps.styles,
-        <style
-          key="custom"
-          dangerouslySetInnerHTML={{
-            __html: outputcss,
-          }}
-        />,
-      ],
-    };
-  }
+  // static async getInitialProps(ctx: any) {
+  //   const page = ctx.renderPage((App) => (props) => <App {...props} />);
+  //   const initialProps: any = await Document.getInitialProps(ctx);
+  //   return {
+  //     ...page,
+  //     styles: [
+  //       ...initialProps.styles,
+  //       <style
+  //         key="custom"
+  //         dangerouslySetInnerHTML={{
+  //           __html: outputcss,
+  //         }}
+  //       />,
+  //     ],
+  //   };
+  // }
 
   render() {
     return (

@@ -38,8 +38,8 @@ main {
  */
 
 h1 {
-  margin: 0.67em 0;
   font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -83,10 +83,10 @@ a {
  */
 
 abbr[title] {
+  border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted; /* 2 */
-  border-bottom: none; /* 1 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -125,9 +125,9 @@ small {
 
 sub,
 sup {
-  position: relative;
   font-size: 75%;
   line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
 
@@ -163,10 +163,10 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0; /* 2 */
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -175,8 +175,7 @@ textarea {
  */
 
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -186,8 +185,7 @@ input {
  */
 
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -196,9 +194,9 @@ select {
  */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -207,11 +205,11 @@ button,
  */
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  padding: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
+  padding: 0;
 }
 
 /**
@@ -219,9 +217,9 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -242,10 +240,10 @@ fieldset {
 
 legend {
   box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
-  color: inherit; /* 2 */
   white-space: normal; /* 1 */
 }
 
@@ -270,8 +268,8 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -280,8 +278,8 @@ textarea {
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -290,7 +288,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -299,7 +297,7 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -378,9 +376,9 @@ pre {
 }
 
 button {
-  padding: 0;
   background-color: transparent;
   background-image: none;
+  padding: 0;
 }
 
 /**
@@ -394,15 +392,15 @@ button:focus {
 }
 
 fieldset {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 ol,
 ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -417,9 +415,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -453,9 +449,9 @@ html {
 ::before,
 ::after {
   box-sizing: border-box; /* 1 */
-  border-color: #e2e8f0; /* 2 */
-  border-style: solid; /* 2 */
   border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e2e8f0; /* 2 */
 }
 
 /*
@@ -484,23 +480,19 @@ textarea {
   resize: vertical;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #a0aec0;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: #a0aec0;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a0aec0;
 }
 
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #a0aec0;
 }
 
@@ -510,7 +502,7 @@ textarea::placeholder {
 }
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -567,8 +559,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -648,8 +639,7 @@ video {
 /* * */
 
 body {
-  font-family: Hiragino Sans, Hiragino Kaku Gothic ProN, ヒラギノ角ゴ ProN W3,
-    Meiryo, メイリオ, sans-serif;
+  font-family: Hiragino Sans, Hiragino Kaku Gothic ProN, ヒラギノ角ゴ ProN W3, Meiryo, メイリオ, sans-serif;
   font-weight: 300;
   color: rgba(29, 29, 31, var(--text-opacity));
   --text-opacity: 1;
@@ -680,11 +670,11 @@ h1 {
       position: absolute;
       top: 0.75em;
       left: -2em;
-      font-family: Comfortaa, sans-serif;
       font-size: 0.5em;
       font-weight: 400;
       content: 'q';
       transform: rotate(-90deg);
+      font-family: Comfortaa, sans-serif;
       @nest ul & {
         font-weight: 300;
 
@@ -717,12 +707,12 @@ h1 {
 .pq-grid-1-3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-row-gap: 0.5rem;
   grid-column-gap: 1rem;
-  line-height: 1.25;
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
+  grid-row-gap: 0.5rem;
   row-gap: 0.5rem;
+  line-height: 1.25;
   & > div:nth-child(odd) {
     grid-column: span 1 / span 1;
     text-align: right;
@@ -765,10 +755,10 @@ h1 {
   left: 0;
   z-index: 9999;
   display: block;
-  color: rgba(245, 245, 247, var(--text-opacity));
   background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  color: rgba(245, 245, 247, var(--text-opacity));
   --text-opacity: 1;
 }
 
@@ -858,6 +848,10 @@ h1 {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -876,6 +870,10 @@ h1 {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .font-light {
@@ -914,6 +912,10 @@ h1 {
   font-size: 4rem;
 }
 
+.leading-none {
+  line-height: 1;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -949,8 +951,8 @@ h1 {
 }
 
 .px-4 {
-  padding-right: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .static {
@@ -1014,6 +1016,10 @@ h1 {
   stroke-width: 2;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-right {
   text-align: right;
 }
@@ -1034,6 +1040,22 @@ h1 {
   z-index: -10;
 }
 
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-start-4 {
+  grid-column-start: 4;
+}
+
 .transform {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
@@ -1042,10 +1064,7 @@ h1 {
   --transform-skew-y: 0;
   --transform-scale-x: 1;
   --transform-scale-y: 1;
-  transform: translateX(var(--transform-translate-x))
-    translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
-    skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
-    scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
 }
 
 .rotate-0 {
@@ -1061,8 +1080,7 @@ h1 {
 }
 
 .transition {
-  transition-property: background-color, border-color, color, fill, stroke,
-    opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
 }
 
 .duration-300 {

@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: true,
+    // enabled: true,
     content: [
       './src/pages/**/*.{js,jsx,ts,tsx,svg}',
       './src/components/**/*.{js,jsx,ts,tsx,svg}',
