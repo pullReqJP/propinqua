@@ -1,8 +1,8 @@
 const purgecssOption = {
   // Specify the paths to all of the template files in your project
   content: [
-    './src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}',
+    './src/pages/**/*.{js,jsx,ts,tsx,svg}',
+    './src/components/**/*.{js,jsx,ts,tsx,svg}',
   ],
 
   // Include any special characters you're using in this regular expression
