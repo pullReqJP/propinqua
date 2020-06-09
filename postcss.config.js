@@ -16,6 +16,7 @@ module.exports = {
           require('tailwindcss'),
           require('@fullhuman/postcss-purgecss')(purgecssOption),
           require('postcss-preset-env'),
+          require('postcss-nesting'),
           require('cssnano')({
             preset: 'default',
           }),
