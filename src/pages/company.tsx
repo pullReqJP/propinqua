@@ -16,7 +16,7 @@ type State = {
   // plrqInfo: { [key: string]: string };
 };
 
-export default class Information extends React.Component<Props, State> {
+export default class Company extends React.Component<Props, State> {
   plrqInfo = {
     会社概要: {
       会社概要_01: [
