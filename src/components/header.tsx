@@ -21,6 +21,20 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  menuTree = {
+    company: {
+      // company: 'company#system',
+      会社概要: 'company#system',
+      事業内容: 'company#hikari',
+    },
+    service: {
+      HP: 'service#hp',
+      system: 'service#system',
+      hikari: 'service#hikari',
+    },
+    contact: {},
+  };
+
   handleClick() {
     this.setState((state) => ({
       isToggleOn: !state.isToggleOn,
@@ -29,22 +43,38 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     console.log(this.state);
   }
 
-  MenuService = () => {
+  Menu = (props: { name: string }) => {
+    let array: string[] = Object.keys(this.menuTree[props.name]);
+    let icon: JSX.Element;
+    switch (props.name) {
+      case 'company':
+        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        break;
+
+      case 'service':
+        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        break;
+
+      case 'contact':
+        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        break;
+
+      default:
+        icon = <></>;
+        break;
+    }
+    let data = this.menuTree[props.name];
     return (
       <div className="menu-icon relative">
-        <Link href={B('/service')}>
-          <IconService width={'1.25rem'} height={'1.25rem'} />
+        <Link href={B('/' + props.name)}>
+          <a>{icon}</a>
         </Link>
         <div className="menu-toggle">
-          <Link href={B('/service#hp')}>
-            <a className="menu-link">HP</a>
+          {array.map((item) => (
+            <Link key={item} href={B('/' + this.menuTree[props.name][item])}>
+              <a className="menu-link">{item}</a>
           </Link>
-          <Link href={B('/service#system')}>
-            <a className="menu-link">system</a>
-          </Link>
-          <Link href={B('/service#hikari')}>
-            <a className="menu-link">hikari</a>
-          </Link>
+          ))}
         </div>
       </div>
     );
@@ -135,8 +165,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
           <li className="col-span-3">
             <div className="flex justify-around h-full">
-              <this.MenuService />
-              <this.MenuService />
+              <this.Menu name="company" />
+              <this.Menu name="service" />
+              <this.Menu name="contact" />
             </div>
           </li>
         </ul>
