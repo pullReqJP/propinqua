@@ -1,32 +1,3 @@
-const purgecssOption = {
-  // Specify the paths to all of the template files in your project
-  content: [
-    './src/pages/**/*.{js,jsx,ts,tsx,svg}',
-    './src/components/**/*.{js,jsx,ts,tsx,svg}',
-  ],
-
-  // Include any special characters you're using in this regular expression
-  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-};
-
 module.exports = {
-  plugins:
-    process.env.CSS_ENV === 'build'
-      ? [
-          require('tailwindcss'),
-          require('@fullhuman/postcss-purgecss')(purgecssOption),
-          require('postcss-preset-env'),
-          require('postcss-nesting'),
-          require('cssnano')({
-            preset: 'default',
-          }),
-        ]
-      : [
-          'tailwindcss',
-          process.env.NODE_ENV === 'production'
-            ? ['@fullhuman/postcss-purgecss', purgecssOption]
-            : undefined,
-          'postcss-preset-env',
-          'postcss-nesting',
-        ],
+  plugins: ['tailwindcss', 'postcss-nesting'],
 };

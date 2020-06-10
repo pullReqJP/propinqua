@@ -1,11 +1,8 @@
 module.exports = {
-  purge: {
-    // enabled: true,
-    content: [
-      './src/pages/**/*.{js,jsx,ts,tsx,svg}',
-      './src/components/**/*.{js,jsx,ts,tsx,svg}',
-    ],
-  },
+  purge: [
+    './src/pages/**/*.{js,jsx,ts,tsx,svg}',
+    './src/components/**/*.{js,jsx,ts,tsx,svg}',
+  ],
   theme: {
     extend: {
       fontFamily: {
