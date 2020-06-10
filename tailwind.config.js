@@ -35,7 +35,7 @@ module.exports = {
         '-10': '-10',
       },
       strokeWidth: {
-        '3': '3',
+        regular: '1.5',
       },
     },
   },
