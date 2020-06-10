@@ -25,7 +25,7 @@ export default class Company extends React.Component<Props, State> {
           value: ['株式会社 プルリク', '（Pullreq limited）'],
         },
         {
-          key: '設立年月',
+          key: '設立日',
           value: ['２０２０年６月１日'],
         },
         {
@@ -61,10 +61,12 @@ export default class Company extends React.Component<Props, State> {
         // },
         {
           key: '従業員数',
-          value: '５名',
+          value: '５人',
         },
       ],
-      会社概要_03: [
+    },
+    事業内容: {
+      事業内容_01: [
         {
           key: '事業内容',
           value: [
