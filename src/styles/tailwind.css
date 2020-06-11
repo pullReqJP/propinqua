@@ -43,7 +43,11 @@ body {
 }
 
 h1 {
-  @apply pt-6 text-3xl font-medium;
+  @apply pt-12 text-3xl font-medium;
+}
+
+h2 {
+  @apply pt-12 text-2xl font-medium;
 }
 
 :not(nav) > {
