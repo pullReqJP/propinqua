@@ -23,9 +23,8 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
   menuTree = {
     company: {
-      // company: 'company#system',
-      会社概要: 'company#system',
-      事業内容: 'company#hikari',
+      会社概要: 'company#会社概要',
+      事業内容: 'company#事業内容',
     },
     service: {
       HP: 'service#hp',
