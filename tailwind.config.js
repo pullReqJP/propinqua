@@ -27,6 +27,7 @@ module.exports = {
         '6': '1.5rem',
         '12': '3rem',
         '-full': '-100%',
+        'offset-16': 'calc(50% + 4rem)',
       },
       rotate: {
         '-135': '-135deg',
