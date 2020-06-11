@@ -14,7 +14,8 @@ module.exports = {
       '/': { page: '/' },
       '/company': { page: '/company' },
       '/service': { page: '/service' },
-      '/product': { page: '/product' },
+      '/hikari': { page: '/hikari' },
+      '/contact': { page: '/contact' },
       '/sample': { page: '/sample' },
     };
 
