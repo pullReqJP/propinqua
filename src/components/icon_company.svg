@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+<svg
+  class="m-auto h-full stroke-current stroke-regular"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  style="isolation:isolate"
+  viewBox="0 0 1000 1000"
+  width="1000pt"
+  height="1000pt">
+  <defs>
+    <clipPath id="_clipPath_7PSEs9XZyLYgZy9hMeoJEuIX8sbAE5wB">
+      <rect width="1000" height="1000"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#_clipPath_7PSEs9XZyLYgZy9hMeoJEuIX8sbAE5wB)">
+    <path
+      d=" M 816 684.667 C 752.445 793.112 634.667 866 500 866 C 297.999 866 134 702.001 134 500 C 134 297.999 297.999 134 500 134 C 634.667 134 752.445 206.888 816 315.333"
+      fill="none"
+      vector-effect="non-scaling-stroke"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    />
+    <circle
+      vector-effect="non-scaling-stroke"
+      cx="500" cy="500" r="247"
+      fill="none"
+      stroke-linejoin="miter"
+      stroke-linecap="square"
+      stroke-miterlimit="3"
+    />
+  </g>
+</svg>

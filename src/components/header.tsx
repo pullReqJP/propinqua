@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import B from '../../lib/basepath';
+import IconCompany from 'react-svg-loader!./icon_company.svg';
 import IconService from 'react-svg-loader!./icon_service.svg';
+import IconHikari from 'react-svg-loader!./icon_hikari.svg';
+import IconContact from 'react-svg-loader!./icon_contact.svg';
 
 type HeaderProps = {};
 
@@ -31,6 +34,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       system: 'service#system',
       hikari: 'service#hikari',
     },
+    hikari: {},
     contact: {},
   };
 
@@ -47,15 +51,19 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     let icon: JSX.Element;
     switch (props.name) {
       case 'company':
-        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        icon = <IconCompany width={'1.25rem'} height={'1.25rem'} />;
         break;
 
       case 'service':
         icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
         break;
 
+      case 'hikari':
+        icon = <IconHikari width={'1.25rem'} height={'1.25rem'} />;
+        break;
+
       case 'contact':
-        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        icon = <IconContact width={'1.25rem'} height={'1.25rem'} />;
         break;
 
       default:
@@ -166,6 +174,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <div className="flex justify-around items-center h-full">
               <this.Menu name="company" />
               <this.Menu name="service" />
+              <this.Menu name="hikari" />
               <this.Menu name="contact" />
             </div>
           </li>

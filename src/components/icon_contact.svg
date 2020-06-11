@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Generator: Gravit.io-->
+<!-- Generator: Gravit.io -->
 <svg
   class="m-auto h-full stroke-current stroke-regular"
   xmlns="http://www.w3.org/2000/svg"
@@ -9,25 +9,18 @@
   width="1000pt"
   height="1000pt">
   <defs>
-    <clipPath id="_clipPath_SfQSjL10Djq9nmZQwYlb3xsHti613jtZ">
+    <clipPath id="_clipPath_OcDM4UbLFmTmNgAAxwxvzMvynj0PUxNx">
       <rect width="1000" height="1000"/>
     </clipPath>
   </defs>
-  <g clip-path="url(#_clipPath_SfQSjL10Djq9nmZQwYlb3xsHti613jtZ)">
-    <circle
-      vector-effect="non-scaling-stroke"
-      cx="500" cy="299" r="165"
+  <g clip-path="url(#_clipPath_OcDM4UbLFmTmNgAAxwxvzMvynj0PUxNx)">
+    <path
+      d=" M 770 349 L 500 600 L 134 260 L 866 260 L 866 740 L 134 740 L 134 365"
       fill="none"
-    />
-    <circle
       vector-effect="non-scaling-stroke"
-      cx="731" cy="701" r="165"
-      fill="none"
-    />
-    <circle
-      vector-effect="non-scaling-stroke"
-      cx="269" cy="701" r="165"
-      fill="none"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
     />
   </g>
 </svg>
