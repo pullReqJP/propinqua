@@ -26,6 +26,7 @@ module.exports = {
         '4': '1rem',
         '6': '1.5rem',
         '12': '3rem',
+        '1/2': '50%',
         '-full': '-100%',
         'offset-16': 'calc(50% + 4rem)',
       },

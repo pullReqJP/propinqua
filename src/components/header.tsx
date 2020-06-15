@@ -165,7 +165,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     return (
       <nav className="apple-menu font-pq">
         <ul>
-          <li className="my-auto md:hidden">
+          <li className="absolute top-1/2 transform -translate-y-1/2 left-4 md:hidden">
             <this.MenuToggle />
           </li>
           <li className="text-center">
