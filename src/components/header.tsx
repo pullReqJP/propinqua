@@ -90,7 +90,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   MenuToggle = () => {
     var menuicon: string;
     menuicon =
-      'absolute inset-x-auto transform bg-white w-full h-px rounded-thin duration-300';
+      'absolute transform bg-white w-full h-px rounded-thin duration-300';
     return (
       <>
         <input
@@ -104,13 +104,15 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           <div className="relative w-6 h-6 text-2xl font-light">
             <div
               className={`${menuicon} ${
-                this.state.isChecked ? 'top-3 -rotate-45' : 'top-2 rotate-0'
+                this.state.isChecked
+                  ? 'top-3 -rotate-45 transform -translate-y-1/2'
+                  : 'top-2 rotate-0'
               }`}
             />
             <div
               className={`${menuicon} ${
                 this.state.isChecked
-                  ? 'bottom-3 rotate-45'
+                  ? 'bottom-3 rotate-45 transform translate-y-1/2'
                   : 'bottom-2 rotate-0'
               }`}
             />
