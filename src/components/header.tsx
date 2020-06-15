@@ -120,46 +120,46 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     );
   };
 
-  // SubMenu = () => (
-  //   <nav
-  //     className={
-  //       this.state.isChecked
-  //         ? 'absolute top-12 left-0 duration-300'
-  //         : 'absolute top-12 -left-full duration-300 md:relative md:inline-block md:left-auto md:top-0'
-  //     }
-  //   >
-  //     <ul
-  //       className="
-  //       bg-black
-  //       bg-opacity-75
-  //       divide-y
-  //       divide-black
-  //       md:flex
-  //       md:bg-opacity-0
-  //       md:divide-y-0
-  //       "
-  //     >
-  //       <li className="px-4 py-1">
-  //         <IconService width={'1.25rem'} height={'1.25rem'} />
-  //         {/* <Link href={B('/product')}>
-  //           <a className="text-xl">product</a>
-  //         </Link> */}
-  //       </li>
-  //       <li className="px-4 py-1">
-  //         <IconService width={'1.25rem'} height={'1.25rem'} />
-  //         {/* <Link href={B('/information')}>
-  //           <a className="text-xl">information</a>
-  //         </Link> */}
-  //       </li>
-  //       <li className="px-4 py-1">
-  //         <IconService width={'1.25rem'} height={'1.25rem'} />
-  //         {/* <Link href={B('/sample')}>
-  //           <a className="text-xl">sample</a>
-  //         </Link> */}
-  //       </li>
-  //     </ul>
-  //   </nav>
-  // );
+  SubMenu = () => (
+    <nav
+      className={
+        this.state.isChecked
+          ? 'absolute top-12 left-0 duration-300'
+          : 'absolute top-12 -left-full duration-300 md:relative md:inline-block md:left-auto md:top-0'
+      }
+    >
+      <ul
+        className="
+        bg-black
+        bg-opacity-75
+        divide-y
+        divide-black
+        md:flex
+        md:bg-opacity-0
+        md:divide-y-0
+        "
+      >
+        <li className="px-4 py-1">
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+          {/* <Link href={B('/product')}>
+            <a className="text-xl">product</a>
+          </Link> */}
+        </li>
+        <li className="px-4 py-1">
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+          {/* <Link href={B('/information')}>
+            <a className="text-xl">information</a>
+          </Link> */}
+        </li>
+        <li className="px-4 py-1">
+          <IconService width={'1.25rem'} height={'1.25rem'} />
+          {/* <Link href={B('/sample')}>
+            <a className="text-xl">sample</a>
+          </Link> */}
+        </li>
+      </ul>
+    </nav>
+  );
 
   render() {
     return (
