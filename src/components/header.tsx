@@ -76,7 +76,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         <Link href={B('/' + props.name)}>
           <a>{icon}</a>
         </Link>
-        <div className="menu-toggle">
+        <div className="menu-link-wrap">
           {array.map((item) => (
             <Link key={item} href={B('/' + this.menuTree[props.name][item])}>
               <a className="menu-link whitespace-no-wrap">{item}</a>

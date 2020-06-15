@@ -123,7 +123,7 @@ h2 {
 .menu-icon {
   @apply bg-transparent transition duration-300 ease-in-out;
 
-  & > .menu-toggle {
+  & > .menu-link-wrap {
     position: absolute;
     height: 0;
     @apply overflow-hidden bg-opacity-0 transition duration-300 ease-in-out;
@@ -132,7 +132,7 @@ h2 {
   &:hover {
     @apply bg-white bg-opacity-25 transition duration-300 ease-in-out;
 
-    & > .menu-toggle {
+    & > .menu-link-wrap {
       display: block;
       height: 100%;
       @apply overflow-visible transition duration-300 ease-in-out;
