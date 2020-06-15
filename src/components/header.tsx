@@ -182,6 +182,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             </div>
           </li>
         </ul>
+        <this.SubMenu />
         {/* <ul className="flex items-center justify-between px-4 py-1">
           <li className="hidden md:inline-block" />
           <li>
@@ -189,7 +190,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
               <a className="text-2xl">pullReq</a>
             </Link>
           </li>
-          <this.SubMenu />
           <li className="w-6" />
         </ul> */}
       </nav>
