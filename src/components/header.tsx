@@ -140,7 +140,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         "
       >
         <li className="px-4 py-1">
-          <IconService width={'1.25rem'} height={'1.25rem'} />
+          <IconCompany width={'1.25rem'} height={'1.25rem'} />
           {/* <Link href={B('/product')}>
             <a className="text-xl">product</a>
           </Link> */}
@@ -152,10 +152,13 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </Link> */}
         </li>
         <li className="px-4 py-1">
-          <IconService width={'1.25rem'} height={'1.25rem'} />
+          <IconHikari width={'1.25rem'} height={'1.25rem'} />
           {/* <Link href={B('/sample')}>
             <a className="text-xl">sample</a>
           </Link> */}
+        </li>
+        <li className="px-4 py-1">
+          <IconContact width={'1.25rem'} height={'1.25rem'} />
         </li>
       </ul>
     </nav>
