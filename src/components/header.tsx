@@ -87,38 +87,38 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     );
   };
 
-  // MenuIcon = () => {
-  //   var menuicon: string;
-  //   menuicon =
-  //     'absolute inset-x-auto transform bg-white w-full h-px rounded-thin duration-300';
-  //   return (
-  //     <>
-  //       <input
-  //         type="checkbox"
-  //         name="hidden"
-  //         id="hidden"
-  //         className="hidden"
-  //         defaultChecked={this.state.isChecked}
-  //       />
-  //       <label htmlFor="hidden" onClick={this.handleClick}>
-  //         <div className="relative w-6 h-6 text-2xl font-light">
-  //           <div
-  //             className={`${menuicon} ${
-  //               this.state.isChecked ? 'top-3 -rotate-45' : 'top-2 rotate-0'
-  //             }`}
-  //           />
-  //           <div
-  //             className={`${menuicon} ${
-  //               this.state.isChecked
-  //                 ? 'bottom-3 rotate-45'
-  //                 : 'bottom-2 rotate-0'
-  //             }`}
-  //           />
-  //         </div>
-  //       </label>
-  //     </>
-  //   );
-  // };
+  MenuToggle = () => {
+    var menuicon: string;
+    menuicon =
+      'absolute inset-x-auto transform bg-white w-full h-px rounded-thin duration-300';
+    return (
+      <>
+        <input
+          type="checkbox"
+          name="hidden"
+          id="hidden"
+          className="hidden"
+          defaultChecked={this.state.isChecked}
+        />
+        <label htmlFor="hidden" onClick={this.handleClick}>
+          <div className="relative w-6 h-6 text-2xl font-light">
+            <div
+              className={`${menuicon} ${
+                this.state.isChecked ? 'top-3 -rotate-45' : 'top-2 rotate-0'
+              }`}
+            />
+            <div
+              className={`${menuicon} ${
+                this.state.isChecked
+                  ? 'bottom-3 rotate-45'
+                  : 'bottom-2 rotate-0'
+              }`}
+            />
+          </div>
+        </label>
+      </>
+    );
+  };
 
   // SubMenu = () => (
   //   <nav
@@ -165,6 +165,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     return (
       <nav className="apple-menu font-pq">
         <ul>
+          <li className="my-auto md:hidden">
+            <this.MenuToggle />
+          </li>
           <li className="text-center">
             <Link href={B('/')}>
               <a className="text-2xl">pullReq</a>
@@ -180,9 +183,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
         </ul>
         {/* <ul className="flex items-center justify-between px-4 py-1">
-          <li className="my-auto md:hidden">
-            <this.MenuIcon />
-          </li>
           <li className="hidden md:inline-block" />
           <li>
             <Link href={B('/')}>
