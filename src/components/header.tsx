@@ -125,7 +125,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       className={
         this.state.isChecked
           ? 'absolute top-12 left-0 duration-300'
-          : 'absolute top-12 -left-full duration-300 md:relative md:inline-block md:left-auto md:top-0'
+          : 'absolute top-12 -left-full duration-300 md:hidden'
       }
     >
       <ul
