@@ -24,7 +24,7 @@
     />
     <circle
       vector-effect="non-scaling-stroke"
-      cx="500" cy="500" r="247"
+      cx="500" cy="500" r="178"
       fill="none"
       stroke-linejoin="miter"
       stroke-linecap="square"
