@@ -72,7 +72,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     }
     // let data = this.menuTree[props.name];
     return (
-      <div className="menu-icon relative rounded w-8 h-8">
+      <div className="menu-icon relative rounded w-8 h-8 hidden md:block">
         <Link href={B('/' + props.name)}>
           <a>{icon}</a>
         </Link>
