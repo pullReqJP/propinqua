@@ -51,19 +51,43 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     let icon: JSX.Element;
     switch (props.name) {
       case 'company':
-        icon = <IconCompany width={'1.25rem'} height={'1.25rem'} />;
+        icon = (
+          <IconCompany
+            className="m-auto h-full stroke-current stroke-regular"
+            width={'1.25rem'}
+            height={'1.25rem'}
+          />
+        );
         break;
 
       case 'service':
-        icon = <IconService width={'1.25rem'} height={'1.25rem'} />;
+        icon = (
+          <IconService
+            className="m-auto h-full stroke-current stroke-regular"
+            width={'1.25rem'}
+            height={'1.25rem'}
+          />
+        );
         break;
 
       case 'hikari':
-        icon = <IconHikari width={'1.25rem'} height={'1.25rem'} />;
+        icon = (
+          <IconHikari
+            className="m-auto h-full stroke-current stroke-regular"
+            width={'1.25rem'}
+            height={'1.25rem'}
+          />
+        );
         break;
 
       case 'contact':
-        icon = <IconContact width={'1.25rem'} height={'1.25rem'} />;
+        icon = (
+          <IconContact
+            className="m-auto h-full stroke-current stroke-regular"
+            width={'1.25rem'}
+            height={'1.25rem'}
+          />
+        );
         break;
 
       default:
