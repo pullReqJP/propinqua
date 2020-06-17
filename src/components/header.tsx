@@ -94,7 +94,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         icon = <></>;
         break;
     }
-    // let data = this.menuTree[props.name];
+
     return (
       <div className="menu-icon relative rounded w-8 h-8 hidden md:block">
         <Link href={B('/' + props.name)}>
@@ -160,31 +160,100 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         bg-opacity-75
         divide-y
         divide-black
-        md:flex
-        md:bg-opacity-0
-        md:divide-y-0
+        text-xl 
+        leading-none
+        md:hidden
         "
       >
-        <li className="px-4 py-1">
-          <IconCompany width={'1.25rem'} height={'1.25rem'} />
-          {/* <Link href={B('/product')}>
-            <a className="text-xl">product</a>
-          </Link> */}
+        {/* 企業情報 */}
+        <li className="px-4 py-1 menu-icon">
+          <Link href={B('/company')}>
+            <a className="flex items-center">
+              <IconCompany
+                className="my-auto mr-1 h-full stroke-current stroke-regular"
+                width={'1.25rem'}
+                height={'1.25rem'}
+              />
+              <span className="pq-text-align">企業情報</span>
+            </a>
+          </Link>
         </li>
-        <li className="px-4 py-1">
-          <IconService width={'1.25rem'} height={'1.25rem'} />
-          {/* <Link href={B('/information')}>
-            <a className="text-xl">information</a>
-          </Link> */}
+        <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={B('/company#会社概要')}>
+            <a>
+              <span className="pq-text-align">会社概要</span>
+            </a>
+          </Link>
         </li>
-        <li className="px-4 py-1">
-          <IconHikari width={'1.25rem'} height={'1.25rem'} />
-          {/* <Link href={B('/sample')}>
-            <a className="text-xl">sample</a>
-          </Link> */}
+        <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={B('/company#事業内容')}>
+            <a>
+              <span className="pq-text-align">事業内容</span>
+            </a>
+          </Link>
         </li>
-        <li className="px-4 py-1">
-          <IconContact width={'1.25rem'} height={'1.25rem'} />
+
+        {/* サービス */}
+        <li className="px-4 py-1 menu-icon">
+          <Link href={B('/service')}>
+            <a className="flex items-center">
+              <IconService
+                className="my-auto mr-1 h-full stroke-current stroke-regular"
+                width={'1.25rem'}
+                height={'1.25rem'}
+              />
+              <span className="pq-text-align">サービス</span>
+            </a>
+          </Link>
+        </li>
+        <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={B('/service#hp')}>
+            <a>
+              <span className="pq-text-align">HPの作成・リニューアル</span>
+            </a>
+          </Link>
+        </li>
+        <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={B('/service#system')}>
+            <a>
+              <span className="pq-text-align">システム受託開発</span>
+            </a>
+          </Link>
+        </li>
+        <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={B('/service#hikari')}>
+            <a>
+              <span className="pq-text-align">p q ひかり　光サービス</span>
+            </a>
+          </Link>
+        </li>
+
+        {/* p q ひかり */}
+        <li className="px-4 py-1 menu-icon">
+          <Link href={B('/hikari')}>
+            <a className="flex items-center">
+              <IconHikari
+                className="my-auto mr-1 h-full stroke-current stroke-regular"
+                width={'1.25rem'}
+                height={'1.25rem'}
+              />
+              <span className="pq-text-align">p q ひかり</span>
+            </a>
+          </Link>
+        </li>
+
+        {/* コンタクト */}
+        <li className="px-4 py-1 menu-icon">
+          <Link href={B('/contact')}>
+            <a className="flex items-center">
+              <IconContact
+                className="my-auto mr-1 h-full stroke-current stroke-regular"
+                width={'1.25rem'}
+                height={'1.25rem'}
+              />
+              <span className="pq-text-align">コンタクト</span>
+            </a>
+          </Link>
         </li>
       </ul>
     </nav>
@@ -212,15 +281,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </li>
         </ul>
         <this.SubMenu />
-        {/* <ul className="flex items-center justify-between px-4 py-1">
-          <li className="hidden md:inline-block" />
-          <li>
-            <Link href={B('/')}>
-              <a className="text-2xl">pullReq</a>
-            </Link>
-          </li>
-          <li className="w-6" />
-        </ul> */}
       </nav>
     );
   }
