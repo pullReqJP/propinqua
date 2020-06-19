@@ -8,6 +8,8 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-18.04
+    env:
+      STATIC_FORMS_KEY: ${{ secrets.STATIC_FORMS_KEY }}
     steps:
       - uses: actions/checkout@v2
 
@@ -29,8 +31,6 @@ jobs:
 
       - name: build
         run: yarn build
-        env:
-          STATIC_FORMS_KEY: ${{ secrets.STATIC_FORMS_KEY }}
 
       - name: export
         run: yarn export
