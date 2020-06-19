@@ -29,6 +29,8 @@ jobs:
 
       - name: build
         run: yarn build
+        env:
+          STATIC_FORMS_KEY: ${{ secrets.STATIC_FORMS_KEY }}
 
       - name: export
         run: yarn export
