@@ -102,7 +102,10 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         </Link>
         <div className="menu-link-wrap">
           {array.map((item) => (
-            <Link key={item} href={B('/' + this.menuTree[props.name][item])}>
+            <Link
+              key={item}
+              href={B('/' + encodeURI(this.menuTree[props.name][item]))}
+            >
               <a className="menu-link whitespace-no-wrap">{item}</a>
             </Link>
           ))}
@@ -179,14 +182,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/company#会社概要')}>
+          <Link href={B(encodeURI('/company#会社概要'))}>
             <a>
               <span className="pq-text-align">会社概要</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/company#事業内容')}>
+          <Link href={B(encodeURI('/company#事業内容'))}>
             <a>
               <span className="pq-text-align">事業内容</span>
             </a>
