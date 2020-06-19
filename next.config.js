@@ -9,6 +9,10 @@ module.exports = {
   //   });
   //   return config;
   // },
+  env: {
+    static_forms_key: process.env.STATIC_FORMS_KEY,
+  },
+
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
