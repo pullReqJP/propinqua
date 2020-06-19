@@ -20,6 +20,7 @@ module.exports = {
       '/service': { page: '/service' },
       '/hikari': { page: '/hikari' },
       '/contact': { page: '/contact' },
+      '/privacy_policy': { page: '/privacy_policy' },
       '/sample': { page: '/sample' },
     };
 
