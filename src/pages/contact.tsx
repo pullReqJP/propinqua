@@ -50,70 +50,124 @@ const form = () => {
       });
     }
   };
+
   return (
     <>
-      <h2>Contact Form</h2>
+      <h1>お問い合わせ</h1>
       <form
+        className="w-full max-w-sm"
         action="https://api.staticforms.xyz/submit"
         method="post"
         onSubmit={handleSubmit}
       >
-        <div className="field">
-          <label className="label">Your Name</label>
-          <div className="control">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
+            <label
+              className="block text-gray-600 md:text-right mb-1 md:mb-0 pr-4"
+              // for="name"
+            >
+              お名前
+            </label>
+          </div>
+          <div className="md:w-2/3">
             <input
-              className="input"
+              className="
+                bg-gray-200
+                appearance-none
+                border
+                border-gray-200
+                rounded
+                w-full
+                py-2
+                px-4
+                text-gray-700
+                leading-tight
+                
+                focus:outline-none
+                focus:bg-white
+                focus:border-gray-700"
+              // id="name"
               type="text"
-              placeholder="Name"
               name="name"
               onChange={handleChange}
               required
             />
           </div>
         </div>
-        <div className="field">
-          <label className="label">Your Email</label>
-          <div className="control">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
+            <label
+              className="block text-gray-600 md:text-right mb-1 md:mb-0 pr-4"
+              // for="email"
+            >
+              メールアドレス
+            </label>
+          </div>
+          <div className="md:w-2/3">
             <input
-              className="input"
-              type="email"
-              placeholder="Email"
+              className="
+                bg-gray-200
+                appearance-none
+                border
+                border-gray-200
+                rounded
+                w-full
+                py-2
+                px-4
+                text-gray-700
+                leading-tight
+                
+                focus:outline-none
+                focus:bg-white
+                focus:border-gray-700"
+              // id="email"
+              type="text"
               name="email"
               onChange={handleChange}
               required
             />
           </div>
         </div>
-        <div className="field" style={{ display: 'none' }}>
-          <label className="label">Title</label>
-          <div className="control">
-            <input
-              type="text"
-              name="honeypot"
-              style={{ display: 'none' }}
-              onChange={handleChange}
-            />
-            <input type="hidden" name="subject" onChange={handleChange} />
-          </div>
+        <div className="mb-6">
+          <label className="block mb-1 text-gray-600">お問い合わせ内容</label>
+          <textarea
+            className="
+              bg-gray-200
+              appearance-none
+              border
+              border-gray-200
+              rounded
+              w-full
+              py-2
+              px-4
+              text-gray-700
+              leading-tight
+              
+              focus:outline-none
+              focus:bg-white
+              focus:border-gray-700"
+            // placeholder="Your Message"
+            name="message"
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div className="field">
-          <label className="label">Message</label>
-          <div className="control">
-            <textarea
-              className="textarea"
-              placeholder="Your Message"
-              name="message"
-              onChange={handleChange}
-              required
-            />
-          </div>
-        </div>
-        <div className="field is-grouped">
-          <div className="control">
-            <button className="button is-primary" type="submit">
-              Submit
-            </button>
-          </div>
+        <div className="text-right">
+          <button
+            className="
+              bg-white
+              hover:bg-gray-100
+              text-gray-800
+              py-1
+              px-4
+              border
+              border-gray-400
+              rounded
+              shadow"
+            type="submit"
+          >
+            送信
+          </button>
         </div>
       </form>
     </>
