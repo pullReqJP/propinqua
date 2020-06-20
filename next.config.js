@@ -27,9 +27,9 @@ module.exports = {
     return paths;
   },
 
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+  assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
 
   publicRuntimeConfig: {
-    basePath: process.env.NODE_ENV === 'production' ? '/propinqua' : '',
+    basePath: process.env.GITHUB_PAGES ? '/propinqua' : '',
   },
 };
