@@ -13,19 +13,24 @@ module.exports = {
     static_forms_key: process.env.STATIC_FORMS_KEY,
   },
 
-  exportPathMap: async function () {
-    const paths = {
-      '/': { page: '/' },
-      '/company': { page: '/company' },
-      '/service': { page: '/service' },
-      '/hikari': { page: '/hikari' },
-      '/contact': { page: '/contact' },
-      '/privacy_policy': { page: '/privacy_policy' },
-      '/sample': { page: '/sample' },
-    };
+  // exportTrailingSlash: true,
 
-    return paths;
-  },
+  // exportPathMap: async function () {
+  //   console.log('exportPathMap');
+  //   const paths = {
+  //     '/': { page: '/' },
+  //   };
+
+  //   const { projects } = data;
+  //   projects.forEach((project) => {
+  //     paths[`/project/${project.slug}`] = {
+  //       page: '/project/[path]',
+  //       query: { path: project.slug },
+  //     };
+  //   });
+
+  //   return paths;
+  // },
 
   assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
 
