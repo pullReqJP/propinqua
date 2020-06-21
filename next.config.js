@@ -15,22 +15,13 @@ module.exports = {
 
   // exportTrailingSlash: true,
 
-  // exportPathMap: async function () {
-  //   console.log('exportPathMap');
-  //   const paths = {
-  //     '/': { page: '/' },
-  //   };
-
-  //   const { projects } = data;
-  //   projects.forEach((project) => {
-  //     paths[`/project/${project.slug}`] = {
-  //       page: '/project/[path]',
-  //       query: { path: project.slug },
-  //     };
-  //   });
-
-  //   return paths;
-  // },
+  exportPathMap: async function () {
+    console.log('exportPathMap');
+    const paths = {
+      '/': { page: '/' },
+    };
+    return paths;
+  },
 
   assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
 
