@@ -13,7 +13,7 @@ module.exports = {
     static_forms_key: process.env.STATIC_FORMS_KEY,
   },
 
-  exportTrailingSlash: true,
+  // exportTrailingSlash: true,
 
   exportPathMap: async function () {
     console.log('exportPathMap');
