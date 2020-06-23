@@ -25,7 +25,7 @@ export default class Company extends React.Component<Props, State> {
               <div className="col-span-1 text-right">{value}</div>
               <div className="col-span-3">
                 {PlrqInfo[props.name][value].map((array: React.ReactNode) => (
-                  <div>{array}</div>
+                  <div key={value}>{array}</div>
                 ))}
               </div>
             </>
