@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import Layout from '../components/layout';
 import PlrqInfo from '../components/plrqInfo';
@@ -18,6 +19,10 @@ export default class Company extends React.Component<Props, State> {
     console.log(data);
     return (
       <>
+        <Head>
+          <title>企業情報 | 株式会社プルリク</title>
+          <meta name="description" content="Pullreq Limited" />
+        </Head>
         <h2 id={props.name}>{props.name}</h2>
         <div className="grid grid-cols-4 col-gap-4 row-gap-2 leading-tight">
           {Object.keys(data).map((value) => (
