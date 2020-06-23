@@ -15,13 +15,13 @@ module.exports = {
 
   // exportTrailingSlash: true,
 
-  exportPathMap: async function () {
-    console.log('exportPathMap');
-    const paths = {
-      '/': { page: '/' },
-    };
-    return paths;
-  },
+  // exportPathMap: async function () {
+  //   console.log('exportPathMap');
+  //   const paths = {
+  //     '/': { page: '/' },
+  //   };
+  //   return paths;
+  // },
 
   assetPrefix: process.env.GITHUB_PAGES ? '/propinqua' : '',
 
