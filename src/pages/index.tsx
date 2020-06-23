@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>pullReq</title>
-        <meta name="description" content="pullReq" />
+        <title>株式会社プルリク</title>
+        <meta name="description" content="Pullreq Limited" />
       </Head>
       <Layout>
         <img

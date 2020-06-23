@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../components/layout';
 
 const form = () => {
@@ -53,6 +54,10 @@ const form = () => {
 
   return (
     <>
+      <Head>
+        <title>お問い合わせ | 株式会社プルリク</title>
+        <meta name="description" content="Pullreq Limited" />
+      </Head>
       <h1>お問い合わせ</h1>
       <form
         className="w-full max-w-sm"
