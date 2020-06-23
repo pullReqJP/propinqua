@@ -9,11 +9,11 @@ type State = {};
 export default class Company extends React.Component<Props, State> {
   constructor(props: Readonly<Props>) {
     super(props);
-    console.log('Information');
+    console.log('Company');
     this.state = {};
   }
 
-  Section = (props) => {
+  Section = (props: { name: string }) => {
     let data = PlrqInfo[props.name];
     console.log(data);
     return (
