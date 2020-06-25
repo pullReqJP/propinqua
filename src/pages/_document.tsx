@@ -37,7 +37,13 @@ class MyDocument extends Document<Props> {
           />
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(){ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${UA_ID}');})`,
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${UA_ID}');
+              `,
             }}
           />
           {/* <script dangerouslySetInnerHTML={{ __html: gtmScript }} /> */}
