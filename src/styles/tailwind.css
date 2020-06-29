@@ -42,6 +42,11 @@ body {
   font-family: theme('fontFamily.display');
 }
 
+.pq-trend-color {
+  @apply text-trend;
+  --text-opacity: 1;
+}
+
 h1 {
   @apply pt-4 text-3xl font-medium;
 }

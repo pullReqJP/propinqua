@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textColor: {
+        trend: '#6cbb59',
+      },
       fontFamily: {
         body: [
           'Hiragino Sans',
