@@ -1,9 +1,23 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 // import outputcss from '!raw-loader!../styles/output.css';
 
-type Props = {};
+type Props = {
+  styleTags: any;
+};
 
 class MyDocument extends Document<Props> {
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+
+    const page = renderPage((App) => (props) =>
+      sheet.collectStyles(<App {...props} />)
+    );
+
+    const styleTags = sheet.getStyleElement();
+
+    return { ...page, styleTags };
+  }
   // static async getInitialProps(ctx: any) {
   //   const page = ctx.renderPage((App) => (props) => <App {...props} />);
   //   const initialProps: any = await Document.getInitialProps(ctx);
@@ -34,6 +48,7 @@ class MyDocument extends Document<Props> {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           /> */}
+          {this.props.styleTags}
           <link
             rel="preload"
             as="font"
