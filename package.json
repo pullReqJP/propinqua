@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.1.5",
-  "description": "npm install raw-loader --save-dev",
+  "version": "1.1.6",
+  "description": "npm install styled-components",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -30,7 +30,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.2"
+    "remark-html": "^11.0.2",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
