@@ -29,6 +29,7 @@
 
 body {
   font-family: theme('fontFamily.body');
+  line-break: strict;
   @apply font-light;
   @apply apple-text-black;
 }
