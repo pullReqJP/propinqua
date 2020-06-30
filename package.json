@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.1.6",
-  "description": "npm install styled-components",
+  "version": "1.1.7",
+  "description": "npm install -D @types/styled-components",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -38,6 +38,7 @@
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^7.1.0",
