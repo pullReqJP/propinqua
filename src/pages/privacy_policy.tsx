@@ -192,6 +192,7 @@ export default function privacyPolicy() {
             <a
               className="pq-trend-color"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://marketingplatform.google.com/about/analytics/terms/jp/"
             >
               Googleアナリティクスサービス利用規約
@@ -200,6 +201,7 @@ export default function privacyPolicy() {
             <a
               className="pq-trend-color"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://policies.google.com/technologies/ads?hl=ja"
             >
               Googleポリシーと規約
