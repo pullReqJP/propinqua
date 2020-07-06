@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import B from '../../lib/basepath';
 import IconCompany from 'react-svg-loader!./icon_company.svg';
 import IconService from 'react-svg-loader!./icon_service.svg';
 import IconHikari from 'react-svg-loader!./icon_hikari.svg';
@@ -97,14 +96,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
     return (
       <div className="menu-icon relative rounded w-8 h-8 hidden md:block">
-        <Link href={B('/' + props.name)}>
+        <Link href={'/' + props.name}>
           <a>{icon}</a>
         </Link>
         <div className="menu-link-wrap">
           {array.map((item) => (
             <Link
               key={item}
-              href={B('/' + encodeURI(this.menuTree[props.name][item]))}
+              href={'/' + encodeURI(this.menuTree[props.name][item])}
             >
               <a className="menu-link whitespace-no-wrap">{item}</a>
             </Link>
@@ -170,7 +169,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       >
         {/* 企業情報 */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/company')}>
+          <Link href="/company">
             <a className="flex items-center">
               <IconCompany
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
@@ -182,14 +181,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B(encodeURI('/company#会社概要'))}>
+          <Link href={encodeURI('/company#会社概要')}>
             <a>
               <span className="pq-text-align">会社概要</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B(encodeURI('/company#事業内容'))}>
+          <Link href={encodeURI('/company#事業内容')}>
             <a>
               <span className="pq-text-align">事業内容</span>
             </a>
@@ -198,7 +197,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
         {/* サービス */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/service')}>
+          <Link href="/service">
             <a className="flex items-center">
               <IconService
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
@@ -210,21 +209,21 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#hp')}>
+          <Link href="/service#hp">
             <a>
               <span className="pq-text-align">HPの作成・リニューアル</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#system')}>
+          <Link href="/service#system">
             <a>
               <span className="pq-text-align">システム受託開発</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#hikari')}>
+          <Link href="/service#hikari">
             <a>
               <span className="pq-text-align">p q ひかり　光サービス</span>
             </a>
@@ -233,7 +232,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
         {/* p q ひかり */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/hikari')}>
+          <Link href="/hikari">
             <a className="flex items-center">
               <IconHikari
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
@@ -247,7 +246,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
         {/* コンタクト */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/contact')}>
+          <Link href="/contact">
             <a className="flex items-center">
               <IconContact
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
@@ -270,7 +269,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <this.MenuToggle />
           </li>
           <li className="text-center">
-            <Link href={B('/')}>
+            <Link href="/">
               <a className="text-2xl">pullReq</a>
             </Link>
           </li>
