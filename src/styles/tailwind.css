@@ -4,31 +4,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap'); */
 /* @import url('https://use.fontawesome.com/releases/v5.13.0/css/all.css'); */
 
-/* comfortaa-300 - latin */
-/* @font-face {
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 300;
-  src: local(''), url('/fonts/comfortaa-v28-latin-300.woff2') format('woff2');
-  font-display: swap;
-} */
-/* comfortaa-regular - latin */
-/* @font-face {
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-    url('/fonts/comfortaa-v28-latin-regular.woff2') format('woff2');
-  font-display: swap;
-} */
-/* comfortaa-700 - latin */
-/* @font-face {
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''), url('/fonts/comfortaa-v28-latin-700.woff2') format('woff2');
-  font-display: swap;
-} */
 /* * */
 
 body {

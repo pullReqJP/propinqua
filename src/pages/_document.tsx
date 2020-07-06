@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-// import outputcss from '!raw-loader!../styles/output.css';
 
 type Props = {
   styleTags: any;
@@ -18,22 +17,6 @@ class MyDocument extends Document<Props> {
 
     return { ...page, styleTags };
   }
-  // static async getInitialProps(ctx: any) {
-  //   const page = ctx.renderPage((App) => (props) => <App {...props} />);
-  //   const initialProps: any = await Document.getInitialProps(ctx);
-  //   return {
-  //     ...page,
-  //     styles: [
-  //       ...initialProps.styles,
-  //       <style
-  //         key="custom"
-  //         dangerouslySetInnerHTML={{
-  //           __html: outputcss,
-  //         }}
-  //       />,
-  //     ],
-  //   };
-  // }
 
   render() {
     const url = this.props.__NEXT_DATA__.page;
@@ -50,26 +33,7 @@ class MyDocument extends Document<Props> {
       <Html lang="ja">
         <Head>
           <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
-          {/* <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          /> */}
           {this.props.styleTags}
-          {/* <link
-            rel="preload"
-            as="font"
-            href="/fonts/comfortaa-v28-latin-300.woff2"
-          />
-          <link
-            rel="preload"
-            as="font"
-            href="/fonts/comfortaa-v28-latin-regular.woff2"
-          />
-          <link
-            rel="preload"
-            as="font"
-            href="/fonts/comfortaa-v28-latin-700.woff2"
-          /> */}
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body className={pageName + pageID}>
