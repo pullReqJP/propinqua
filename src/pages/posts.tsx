@@ -2,7 +2,6 @@ import Layout from '../components/layout';
 import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import B from '../../lib/basepath';
 import Date from '../components/date';
 import { getSortedPostsData } from '../../lib/posts';
 
@@ -17,7 +16,7 @@ export default function Posts({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={B('/posts/[id]')} as={B('/posts/' + id)}>
+              <Link href="/posts/[id]" as={'/posts/' + id}>
                 <a>{title}</a>
               </Link>
               <br />
