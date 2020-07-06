@@ -55,7 +55,7 @@ class MyDocument extends Document<Props> {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           /> */}
           {this.props.styleTags}
-          <link
+          {/* <link
             rel="preload"
             as="font"
             href="/fonts/comfortaa-v28-latin-300.woff2"
@@ -69,7 +69,7 @@ class MyDocument extends Document<Props> {
             rel="preload"
             as="font"
             href="/fonts/comfortaa-v28-latin-700.woff2"
-          />
+          /> */}
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body className={pageName + pageID}>
