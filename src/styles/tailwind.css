@@ -28,11 +28,15 @@ body {
 }
 
 h1 {
-  @apply pt-4 text-3xl font-medium;
+  @apply my-6 pt-4 text-3xl font-medium;
+}
+
+.container > h1:first-child {
+  @apply mt-0;
 }
 
 h2 {
-  @apply pt-12 text-2xl font-medium;
+  @apply my-6 pt-6 text-2xl font-medium border-b-2 border-trend;
 }
 
 :not(nav) > {
