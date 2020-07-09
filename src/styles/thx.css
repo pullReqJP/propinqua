@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap&text= ');
+
+/* 全角化 */
+.thx_fwid {
+  font-feature-settings: 'fwid';
+}
+
+/* プロポーショナル化 */
+.thx_pwid {
+  font-feature-settings: 'pwid';
+}
+
+/* 半角化 */
+.thx_hwid {
+  font-feature-settings: 'hwid';
+}
+
+/* 半角送り化 */
+.thx_halt {
+  font-feature-settings: 'halt';
+}
+
+/* 小仮名化 */
+.thx_kana {
+  /* font-size: 0.96em; */
+  /* letter-spacing: 0.0566em; */
+}
+
+/* ゼロ幅スペース（&#x200b;、\x{200b}） */
+.thx_zero_spc {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 和欧間スペース */
+.thx_wao_spc {
+  font-family: Kosugi, sans-serif;
+  font-size: 0.5em;
+  line-height: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+code .thx_wao_spc {
+  display: none;
+}
+
+/* 相殺スペース */
+.thx_clps_spc {
+  font-family: Kosugi, sans-serif;
+  line-height: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+code .thx_clps_spc {
+  display: none;
+}
+
+/* 句読点 */
+.thx_punc_wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.thx_punc_punc {
+  font-feature-settings: 'halt';
+}
+
+.thx_punc_clbr {
+  font-feature-settings: 'halt';
+}
+
+.thx_punc_wrap + .thx_clps_spc {
+  font-size: 2em;
+}
+
+.thx_punctuation {
+  position: absolute;
+  bottom: -0.12em;
+  line-height: 1em;
+  font-feature-settings: 'halt';
+}
+
+/* amp */
+/* body.amp .thx_clps_spc {
+  font-family: initial;
+} */
+
+.chrome .thx_punctuation {
+  /* bottom: -0.12em; */
+}
+
+.gecko .thx_punctuation {
+  /* bottom: -0.12em; */
+}
+
+.safari .thx_punctuation {
+  bottom: calc(-0.12em - 1px);
+}
+
+code .thx_punc_wrap .thx_punctuation {
+  position: relative;
+  font-feature-settings: 'fwid';
+  bottom: initial;
+}
+
+/* 中黒 */
+:not(code) > .thx_mid_dot {
+  /* font-feature-settings: "halt"; */
+}
+
+:not(code) > .thx_clps_spc + .thx_mid_dot {
+  /* margin-left: -0.25em; */
+}
+
+:not(code) > .thx_mid_dot + .thx_clps_spc {
+  /* margin-left: -0.25em; */
+}
+
+/* 括弧など */
+:not(code) > .thx_opening_mark,
+:not(code) > .thx_closing_mark {
+  font-feature-settings: 'halt';
+}
