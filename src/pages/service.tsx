@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import Thx from '../../lib/thx';
 import ServiceSymbol from 'react-svg-loader!../components/service.svg';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
@@ -19,6 +20,7 @@ export default function service() {
 
       <Layout>
         <div className="container p-4 break-words">
+          <Thx>test</Thx>
           <h1>サービス概要</h1>
           <div className="grid md:grid-cols-2 col-gap-8">
             <ServiceSymbol
