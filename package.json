@@ -1,7 +1,7 @@
 {
   "name": "propinqua",
-  "version": "1.2.0",
-  "description": "npm i -S react-string-replace",
+  "version": "1.2.1",
+  "description": "npm update tailwindcss",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -62,7 +62,7 @@
     "stylelint-order": "^4.0.0",
     "stylelint-prettier": "^1.1.2",
     "tailwind.macro": "^1.0.0-alpha.10",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^1.5.1",
     "typescript": "^3.9.2"
   }
 }
