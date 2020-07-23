@@ -48,6 +48,7 @@ export default class Company extends React.Component<Props, State> {
           <this.Section name="会社概要" />
           {/* <this.Section name="事業内容" /> */}
         </div>
+        <img src="/img/company_20200723_01.jpg" alt="company-image" />
       </Layout>
     );
   }
