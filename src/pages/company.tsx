@@ -20,15 +20,15 @@ export default class Company extends React.Component<Props, State> {
     return (
       <>
         <Head>
-          <title>企業情報 | 株式会社プルリク</title>
+          <title>company | 株式会社プルリク</title>
           <meta name="description" content="Pullreq Limited" />
         </Head>
-        <h2 id={props.name}>{props.name}</h2>
-        <div className="grid grid-cols-4 col-gap-4 row-gap-2 leading-tight">
+        {/* <h2 id={props.name}>{props.name}</h2> */}
+        <div className="grid grid-cols-3 col-gap-4 row-gap-2 leading-tight">
           {Object.keys(data).map((value) => (
             <>
               <div className="col-span-1 text-right">{value}</div>
-              <div className="col-span-3">
+              <div className="col-span-2">
                 {PlrqInfo[props.name][value].map((array: React.ReactNode) => (
                   <div key={value}>{array}</div>
                 ))}
@@ -44,9 +44,9 @@ export default class Company extends React.Component<Props, State> {
     return (
       <Layout>
         <div className="container p-4">
-          <h1>企業情報</h1>
+          <h1>company</h1>
           <this.Section name="会社概要" />
-          <this.Section name="事業内容" />
+          {/* <this.Section name="事業内容" /> */}
         </div>
       </Layout>
     );
