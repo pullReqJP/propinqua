@@ -19,7 +19,7 @@ export default function service() {
       </Head>
 
       <Layout>
-        <div className="container p-4 break-words">
+        <div className="container mx-auto p-4 break-words">
           <h1>サービス概要</h1>
           <div className="grid md:grid-cols-2 col-gap-8">
             <ServiceSymbol

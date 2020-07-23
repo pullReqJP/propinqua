@@ -43,7 +43,7 @@ export default class Company extends React.Component<Props, State> {
   render() {
     return (
       <Layout>
-        <div className="container p-4">
+        <div className="container mx-auto p-4">
           <h1>company</h1>
           <this.Section name="会社概要" />
           {/* <this.Section name="事業内容" /> */}
