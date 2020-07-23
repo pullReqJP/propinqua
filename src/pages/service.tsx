@@ -20,7 +20,6 @@ export default function service() {
 
       <Layout>
         <div className="container p-4 break-words">
-          <Thx>test</Thx>
           <h1>サービス概要</h1>
           <div className="grid md:grid-cols-2 col-gap-8">
             <ServiceSymbol
@@ -36,9 +35,11 @@ export default function service() {
             />
             <div>
               <h2 id="hp">HPの作成・リニューアル</h2>
-              <Para>
+              {/* <Thx>
                 企画開発、保守、ドメイン取得、SEO対策、サーバーなどWEBページを作成するのに必要なものすべてをワンストップで提供。
-              </Para>
+              </Thx> */}
+              <Para></Para>
+
               <Para>
                 また、EC販売やWEBページに連動した社内業務効率化を図るソフト開発などもお任せください。
               </Para>
@@ -54,10 +55,10 @@ export default function service() {
               <Para>
                 1ギガタイプと10ギガタイプを提供。お客様に合った形でハイクオリティな光回線をご利用いただけます。
               </Para>
-              <Para>
+              <Thx tag="p">
                 また、速度制限にかからない「no
                 limit」プランを利用することで、通信にかかわるストレスを解消します。
-              </Para>
+              </Thx>
             </div>
           </div>
         </div>
