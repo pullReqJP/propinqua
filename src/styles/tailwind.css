@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  @apply my-6 pt-4 text-2xl font-pq;
+  @apply my-6 pt-4 text-3xl font-pq;
 }
 
 .container > h1:first-child {
