@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  @apply my-6 pt-6 text-2xl font-medium border-b-2 border-trend;
+  @apply my-6 pt-6 text-xl font-medium border-b-2 border-trend;
 }
 
 :not(nav) > {
