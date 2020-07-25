@@ -243,7 +243,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
         {/* ソリューション */}
         <li className="px-4 py-1 menu-icon">
-          <Link href="/service">
+          <Link href="/solution">
             <a className="flex items-center">
               <IconService
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
