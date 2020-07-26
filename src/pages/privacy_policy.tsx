@@ -210,10 +210,16 @@ export default function privacyPolicy() {
           </Para>
           <h2>お問い合わせ</h2>
           <Para>
-            当社における個人情報保護に関してご質問、苦情等がありましたら、当社個人情報管理担当へご連絡下さい。
+            当社における個人情報保護に関してご質問、苦情等がありましたら、下記メールアドレスまでご連絡下さい。
+            <br />
+          </Para>
+          <Para>
+            <a className="pq-trend-color" href="mailto:info@p-req.com">
+              info@p-req.com
+            </a>
           </Para>
           <Para>2020年6月制定</Para>
-          <Para>2020年6月30日最終改定</Para>
+          <Para>2020年7月26日最終改定</Para>
           <Para>株式会社　プルリク</Para>
         </div>
       </Layout>
