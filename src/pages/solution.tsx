@@ -1,5 +1,12 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+
+const Para = styled('p')`
+  ${tw`my-6`};
+  text-indent: 1em;
+`;
 
 export default function solution() {
   return (
@@ -26,13 +33,16 @@ export default function solution() {
               <img src="/img/solution_20200723_02.png" alt="excel-image" />
             </div>
             <div className="p-4 font-pq">
-              <p>顧客情報をExcelで管理してるんだけどシステム化したいなぁ。</p>
+              <Para>
+                顧客情報や管理台帳を複数のエクセルで管理してるんだけど、同じ内容を複数回入力するのは、ミスも増えるから何とかしたい。
+              </Para>
               <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
                 solution!
               </p>
-              <p>
-                様々な形でのシステム開発にお応えします。顧客管理システムや、受注管理システムなど、今までExcelや紙による伝票で管理されていたファイルをシステム化して業務効率化をはかります。
-              </p>
+              <Para>社内の情報をニーズに合わせてシステム化。</Para>
+              <Para>
+                顧客管理システムや、受発注管理システムなど、今までExcelや伝票で管理されていた情報をシステム化して業務効率の向上とヒューマンエラーを改善します。{' '}
+              </Para>
             </div>
           </div>
           <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
@@ -40,16 +50,21 @@ export default function solution() {
               <img src="/img/solution_20200723_03.png" alt="excel-image" />
             </div>
             <div className="p-4 font-pq">
-              <p>
-                以前システム化したものが、Windowsのサポートが終了することでセキュリティ面が心配・・・
-              </p>
-              <p>でも、新しくシステムを組みなおすコストがかけられない・・・</p>
+              <Para>
+                Windows７のサポートが終了しちゃったけどそのまま使い続けて大丈夫かな？
+              </Para>
+              <Para>
+                今使っている社内システムが対応しなくなっちゃうけど、新しくシステムを組みなおすコストがかけられない・・・
+              </Para>
               <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
                 solution!
               </p>
-              <p>
-                現状動作している環境を仮想化して、今後も継続的に安全に利用できる状態を構築いたします。
-              </p>
+              <Para>
+                Windows10へのアップデートや新しいパソコンへの移設をご提案。
+              </Para>
+              <Para>
+                現環境を変更できない場合は、そのまま仮想化して、今後も継続的に安全に利用できる状態を構築いたします。
+              </Para>
             </div>
           </div>
           <div className="flex mb-4 p-4 shadow-md">
@@ -57,15 +72,15 @@ export default function solution() {
               <img src="/img/solution_20200723_04.png" alt="excel-image" />
             </div>
             <div className="p-4 font-pq">
-              <p>
+              <Para>
                 社内のシステムと連携した会社のホームページを作りたいなぁ・・・
-              </p>
+              </Para>
               <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
                 solution!
               </p>
-              <p>
-                お客様のアクセスできる、ホームページやマイページなどをすでにお持ちのお客様はサイトとデータベースの連携を取ってより、効率的で、よりユーティリティの高いサイトにすることができます。
-              </p>
+              <Para>
+                すでに自社ホームページやマイページをお持ちのお客様にはそれらのサイト・データベースを連携させた、より使いやすくより情報整理が容易なシステムをご提案いたします。
+              </Para>
             </div>
           </div>
           <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
@@ -73,14 +88,17 @@ export default function solution() {
               <img src="/img/solution_20200723_05.png" alt="excel-image" />
             </div>
             <div className="p-4 font-pq">
-              <p>メールが急に送れなくなった・・・</p>
-              <p>受け取れなくなった・・・</p>
+              <Para>メールが急に送れなくなった・・・</Para>
+              <Para>受け取れなくなった・・・</Para>
               <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
                 solution!
               </p>
-              <p>
-                まずは原因の調査をします。原因が判明しましたら、まずはご利用がいただける状態を構築し、今後のご利用にあたっての注意事項等ご説明させていただきます。
-              </p>
+              <Para>
+                当社で原因を調査し、メールサービスの復旧・再開を最優先で行います。
+              </Para>
+              <Para>
+                判明した原因はお客様に共有し、今後問題が再発しない運用方法やシステムの改善案について、ていねいにご案内いたします。{' '}
+              </Para>
             </div>
           </div>
           <h2>対応実績</h2>
