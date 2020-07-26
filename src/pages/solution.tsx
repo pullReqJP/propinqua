@@ -28,7 +28,7 @@ export default function solution() {
           </h1>
         </div>
         <div className="container mx-auto p-4 break-words">
-          <div className="flex mb-4 p-4 shadow-md">
+          <div className="flex flex-col md:flex-row mb-4 p-4 shadow-md">
             <div>
               <img src="/img/solution_20200723_02.png" alt="excel-image" />
             </div>
@@ -45,7 +45,7 @@ export default function solution() {
               </Para>
             </div>
           </div>
-          <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
+          <div className="flex flex-col md:flex-row-reverse mb-4 p-4 shadow-md">
             <div>
               <img src="/img/solution_20200723_03.png" alt="excel-image" />
             </div>
@@ -67,7 +67,7 @@ export default function solution() {
               </Para>
             </div>
           </div>
-          <div className="flex mb-4 p-4 shadow-md">
+          <div className="flex flex-col md:flex-row mb-4 p-4 shadow-md">
             <div>
               <img src="/img/solution_20200723_04.png" alt="excel-image" />
             </div>
@@ -83,7 +83,7 @@ export default function solution() {
               </Para>
             </div>
           </div>
-          <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
+          <div className="flex flex-col md:flex-row-reverse mb-4 p-4 shadow-md">
             <div>
               <img src="/img/solution_20200723_05.png" alt="excel-image" />
             </div>
