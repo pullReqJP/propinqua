@@ -27,6 +27,12 @@ export default function solution() {
             </div>
             <div className="p-4 font-pq">
               <p>顧客情報をExcelで管理してるんだけどシステム化したいなぁ。</p>
+              <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
+                solution!
+              </p>
+              <p>
+                様々な形でのシステム開発にお応えします。顧客管理システムや、受注管理システムなど、今までExcelや紙による伝票で管理されていたファイルをシステム化して業務効率化をはかります。
+              </p>
             </div>
           </div>
           <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
@@ -35,7 +41,14 @@ export default function solution() {
             </div>
             <div className="p-4 font-pq">
               <p>
-                以前システム化したものが、Windowsのサポート終了で動かなくなっちゃう・・・
+                以前システム化したものが、Windowsのサポートが終了することでセキュリティ面が心配・・・
+              </p>
+              <p>でも、新しくシステムを組みなおすコストがかけられない・・・</p>
+              <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
+                solution!
+              </p>
+              <p>
+                現状動作している環境を仮想化して、今後も継続的に安全に利用できる状態を構築いたします。
               </p>
             </div>
           </div>
@@ -47,6 +60,12 @@ export default function solution() {
               <p>
                 社内のシステムと連携した会社のホームページを作りたいなぁ・・・
               </p>
+              <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
+                solution!
+              </p>
+              <p>
+                お客様のアクセスできる、ホームページやマイページなどをすでにお持ちのお客様はサイトとデータベースの連携を取ってより、効率的で、よりユーティリティの高いサイトにすることができます。
+              </p>
             </div>
           </div>
           <div className="flex flex-row-reverse mb-4 p-4 shadow-md">
@@ -56,6 +75,12 @@ export default function solution() {
             <div className="p-4 font-pq">
               <p>メールが急に送れなくなった・・・</p>
               <p>受け取れなくなった・・・</p>
+              <p className="mt-4 mb-2 pq-trend-color text-2xl border-b-2 border-trend">
+                solution!
+              </p>
+              <p>
+                まずは原因の調査をします。原因が判明しましたら、まずはご利用がいただける状態を構築し、今後のご利用にあたっての注意事項等ご説明させていただきます。
+              </p>
             </div>
           </div>
           <h2>対応実績</h2>
