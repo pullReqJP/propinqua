@@ -60,13 +60,20 @@ export default function solution() {
           </div>
           <h2>対応実績</h2>
           <ul>
-            <li>Windowsのサポートが終了しているシステムの改修</li>
-            <li>ルータ設定</li>
+            <li>社内管理システムの改修</li>
+            <li>社内ネットワーク環境設定</li>
             <li>メール機能不全調査・改修</li>
             <li>顧客管理システム改修</li>
-            <li>HDD修理</li>
+            <li>HDD交換作業</li>
             <li>VPN接続設定</li>
             <li>DNSサーバ移転</li>
+            <li>IP電話（ビジネスフォン）の設定</li>
+            <li>プリンター設定</li>
+            <li>各種デバイス設定</li>
+            <li>IPアドレスの設定、管理</li>
+            <li>社内システムデータベース連携</li>
+            <li>メールサーバ構築</li>
+            <li>メールアカウントの追加</li>
           </ul>
         </div>
       </Layout>
