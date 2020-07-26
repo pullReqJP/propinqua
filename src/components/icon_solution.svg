@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  style="isolation:isolate"
+  viewBox="0 0 1000 1000"
+  width="1000pt"
+  height="1000pt">
+  <g id="レイヤー_1">
+    <path
+      class="st0"
+      d="M696.02,700C788.93,637.07,850,530.67,850,410c0-193.3-156.7-350-350-350S150,216.7,150,410c0,120.67,61.07,227.07,153.98,290"
+      fill="none"
+      vector-effect="non-scaling-stroke"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    />
+    <line
+      class="st0" x1="215" y1="700" x2="785" y2="700"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    />
+    <!-- <line
+      class="st0" x1="300" y1="780" x2="700" y2="780"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    /> -->
+    <line
+      class="st0" x1="300" y1="820" x2="700" y2="820"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    />
+    <line
+      class="st0" x1="445" y1="940" x2="555" y2="940"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-miterlimit="3"
+    />
+  </g>
+</svg>
