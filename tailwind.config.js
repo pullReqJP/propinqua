@@ -8,6 +8,13 @@ module.exports = {
       textColor: {
         trend: '#6cbb59',
       },
+      opacity: {
+        '10': '0.1',
+        '20': '0.2',
+        '60': '0.6',
+        '70': '0.7',
+        '95': '0.95',
+      },
       fontFamily: {
         body: [
           'Hiragino Sans',
@@ -19,8 +26,12 @@ module.exports = {
         ],
         display: ['Comfortaa', 'sans-serif'],
       },
+      borderColor: {
+        trend: '#6cbb59',
+      },
       borderRadius: {
         thin: '0.5px',
+        '4rem': '4rem',
       },
       inset: {
         '1': '0.25rem',

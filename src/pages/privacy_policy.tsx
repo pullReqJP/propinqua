@@ -16,7 +16,7 @@ export default function privacyPolicy() {
         <meta name="description" content="Pullreq Limited" />
       </Head>
       <Layout>
-        <div className="container p-4 break-words">
+        <div className="container mx-auto p-4 break-words">
           <h1>株式会社プルリク　プライバシーポリシー</h1>
           <Para>
             株式会社プルリク（以下「当社」といいます）は、初心者の方からヘビーユーザーの方まで、幅広い層のお客様（以下「お客様」といいます）に当社が提供する全てのサービス（インターネット上で提供するウェブサイト、コンテンツ、アプリケーション並びにその他コンピュータソフトウェア等をいいますが、これらに限りません。以下総称して「本サービス」といいます）を安心且つ快適にご利用いただけるよう、また、より機能性及び信頼性の高い本サービスの提供が行えるよう努めております。
@@ -210,10 +210,16 @@ export default function privacyPolicy() {
           </Para>
           <h2>お問い合わせ</h2>
           <Para>
-            当社における個人情報保護に関してご質問、苦情等がありましたら、当社個人情報管理担当へご連絡下さい。
+            当社における個人情報保護に関してご質問、苦情等がありましたら、下記メールアドレスまでご連絡下さい。
+            <br />
+          </Para>
+          <Para>
+            <a className="pq-trend-color" href="mailto:info@p-req.com">
+              info@p-req.com
+            </a>
           </Para>
           <Para>2020年6月制定</Para>
-          <Para>2020年6月30日最終改定</Para>
+          <Para>2020年7月26日最終改定</Para>
           <Para>株式会社　プルリク</Para>
         </div>
       </Layout>

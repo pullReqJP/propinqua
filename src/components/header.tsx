@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import B from '../../lib/basepath';
 import IconCompany from 'react-svg-loader!./icon_company.svg';
 import IconService from 'react-svg-loader!./icon_service.svg';
+import IconSolution from 'react-svg-loader!./icon_solution.svg';
 import IconHikari from 'react-svg-loader!./icon_hikari.svg';
 import IconContact from 'react-svg-loader!./icon_contact.svg';
 
@@ -26,14 +26,15 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
   menuTree = {
     company: {
-      会社概要: 'company#会社概要',
-      事業内容: 'company#事業内容',
+      //   会社概要: 'company#会社概要',
+      //   事業内容: 'company#事業内容',
     },
     service: {
-      HP: 'service#hp',
-      system: 'service#system',
-      hikari: 'service#hikari',
+      //   HP: 'service#hp',
+      //   system: 'service#system',
+      //   hikari: 'service#hikari',
     },
+    solution: {},
     hikari: {},
     contact: {},
   };
@@ -70,6 +71,16 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         );
         break;
 
+      case 'solution':
+        icon = (
+          <IconSolution
+            className="m-auto h-full stroke-current stroke-regular"
+            width={'1.25rem'}
+            height={'1.25rem'}
+          />
+        );
+        break;
+
       case 'hikari':
         icon = (
           <IconHikari
@@ -97,14 +108,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
     return (
       <div className="menu-icon relative rounded w-8 h-8 hidden md:block">
-        <Link href={B('/' + props.name)}>
+        <Link href={'/' + props.name}>
           <a>{icon}</a>
         </Link>
         <div className="menu-link-wrap">
           {array.map((item) => (
             <Link
               key={item}
-              href={B('/' + encodeURI(this.menuTree[props.name][item]))}
+              href={'/' + encodeURI(this.menuTree[props.name][item])}
             >
               <a className="menu-link whitespace-no-wrap">{item}</a>
             </Link>
@@ -170,70 +181,84 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       >
         {/* 企業情報 */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/company')}>
+          <Link href="/company">
             <a className="flex items-center">
               <IconCompany
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
                 width={'1.25rem'}
                 height={'1.25rem'}
               />
-              <span className="pq-text-align">企業情報</span>
+              <span className="pq-text-align">company</span>
             </a>
           </Link>
         </li>
-        <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B(encodeURI('/company#会社概要'))}>
+        {/* <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href={encodeURI('/company#会社概要')}>
             <a>
               <span className="pq-text-align">会社概要</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B(encodeURI('/company#事業内容'))}>
+          <Link href={encodeURI('/company#事業内容')}>
             <a>
               <span className="pq-text-align">事業内容</span>
             </a>
           </Link>
-        </li>
+        </li> */}
 
         {/* サービス */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/service')}>
+          <Link href="/service">
             <a className="flex items-center">
               <IconService
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
                 width={'1.25rem'}
                 height={'1.25rem'}
               />
-              <span className="pq-text-align">サービス</span>
+              <span className="pq-text-align">service</span>
             </a>
           </Link>
         </li>
-        <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#hp')}>
+        {/* <li className="px-4 py-1 pl-10 menu-icon">
+          <Link href="/service#hp">
             <a>
               <span className="pq-text-align">HPの作成・リニューアル</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#system')}>
+          <Link href="/service#system">
             <a>
               <span className="pq-text-align">システム受託開発</span>
             </a>
           </Link>
         </li>
         <li className="px-4 py-1 pl-10 menu-icon">
-          <Link href={B('/service#hikari')}>
+          <Link href="/service#hikari">
             <a>
               <span className="pq-text-align">p q ひかり　光サービス</span>
+            </a>
+          </Link>
+        </li> */}
+
+        {/* ソリューション */}
+        <li className="px-4 py-1 menu-icon">
+          <Link href="/solution">
+            <a className="flex items-center">
+              <IconSolution
+                className="my-auto mr-1 h-full stroke-current stroke-regular"
+                width={'1.25rem'}
+                height={'1.25rem'}
+              />
+              <span className="pq-text-align">solution</span>
             </a>
           </Link>
         </li>
 
         {/* p q ひかり */}
-        <li className="px-4 py-1 menu-icon">
-          <Link href={B('/hikari')}>
+        {/* <li className="px-4 py-1 menu-icon">
+          <Link href="/hikari">
             <a className="flex items-center">
               <IconHikari
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
@@ -243,18 +268,18 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
               <span className="pq-text-align">p q ひかり</span>
             </a>
           </Link>
-        </li>
+        </li> */}
 
         {/* コンタクト */}
         <li className="px-4 py-1 menu-icon">
-          <Link href={B('/contact')}>
+          <Link href="/contact">
             <a className="flex items-center">
               <IconContact
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
                 width={'1.25rem'}
                 height={'1.25rem'}
               />
-              <span className="pq-text-align">コンタクト</span>
+              <span className="pq-text-align">contact</span>
             </a>
           </Link>
         </li>
@@ -270,7 +295,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <this.MenuToggle />
           </li>
           <li className="text-center">
-            <Link href={B('/')}>
+            <Link href="/">
               <a className="text-2xl">pullReq</a>
             </Link>
           </li>
@@ -278,7 +303,8 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <div className="flex justify-start items-center h-full">
               <this.Menu name="company" />
               <this.Menu name="service" />
-              <this.Menu name="hikari" />
+              <this.Menu name="solution" />
+              {/* <this.Menu name="hikari" /> */}
               <this.Menu name="contact" />
             </div>
           </li>
