@@ -61,6 +61,7 @@ code .thx_clps_spc {
 .thx_punc_wrap {
   position: relative;
   display: inline-block;
+  text-indent: 0;
 }
 
 .thx_punc_punc {
@@ -122,4 +123,9 @@ code .thx_punc_wrap .thx_punctuation {
 :not(code) > .thx_opening_mark,
 :not(code) > .thx_closing_mark {
   font-feature-settings: 'halt';
+}
+
+/* インデント */
+.thx_indent_0-1 {
+  text-indent: 1em;
 }

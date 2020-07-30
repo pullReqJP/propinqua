@@ -8,7 +8,10 @@ export default (props) => {
   // const Tag = props.tag;
   let Thx = props.children;
   const Tag = props.tag ? props.tag : 'p';
+  const Class = props.className ? props.className : '';
   let key = Thx;
+
+  // 分離禁止の挿入
   Thx = Thx.replace(/([‘“（〔［｛〈《「『【・：；]+)/giu, '$1\ufeff');
   Thx = Thx.replace(/([、。，．’”）〕］｝〉》」』】]+)/giu, '\ufeff$1');
   // console.log(Thx);
@@ -153,5 +156,9 @@ export default (props) => {
   ); //欧文の検索
 
   console.log(Thx);
-  return <Tag key={key}>{Thx}</Tag>;
+  return (
+    <Tag key={key} className={Class}>
+      {Thx}
+    </Tag>
+  );
 };
