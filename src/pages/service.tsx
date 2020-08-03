@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
-import Thx from '../../lib/thx';
 import ServiceSymbol from 'react-svg-loader!../components/service.svg';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
@@ -14,13 +13,13 @@ export default function service() {
   return (
     <>
       <Head>
-        <title>サービス概要 | 株式会社プルリク</title>
+        <title>service | 株式会社プルリク</title>
         <meta name="description" content="Pullreq Limited" />
       </Head>
 
       <Layout>
-        <div className="container p-4 break-words">
-          <h1>サービス概要</h1>
+        <div className="container mx-auto p-4 break-words">
+          <h1>service</h1>
           <div className="grid md:grid-cols-2 col-gap-8">
             <ServiceSymbol
               className="
@@ -33,32 +32,23 @@ export default function service() {
                 lg:row-span-3
               "
             />
-            <div>
-              <h2 id="hp">HPの作成・リニューアル</h2>
-              {/* <Thx>
-                企画開発、保守、ドメイン取得、SEO対策、サーバーなどWEBページを作成するのに必要なものすべてをワンストップで提供。
-              </Thx> */}
-              <Para></Para>
-
-              <Para>
-                また、EC販売やWEBページに連動した社内業務効率化を図るソフト開発などもお任せください。
-              </Para>
+            <div className="font-pq">
+              <h2>法人向けサービス</h2>
+              <h3>ソリューション案件（システム受託開発）</h3>
+              <h3>p q ひかり</h3>
+              <h3>p q ひかり電話　officeタイプ</h3>
+              <h3>net value</h3>
+              <h3>プロバイダサービス</h3>
+              <h3>固定IPサービス</h3>
+              <h3>HP作成・リニューアル</h3>
+              <h3>LP作成</h3>
             </div>
-            <div>
-              <h2 id="system">システム受託開発</h2>
-              <Para>
-                テレワークに必要な環境の構築から、受注管理システム、勤怠管理や、給与計算など、パッケージソフトでは叶わない、お客様の細かなニーズに合わせたソフトウェアの開発など、幅広く対応いたします。
-              </Para>
-            </div>
-            <div>
-              <h2 id="hikari">光サービス「ｐｑひかり」</h2>
-              <Para>
-                1ギガタイプと10ギガタイプを提供。お客様に合った形でハイクオリティな光回線をご利用いただけます。
-              </Para>
-              <Thx tag="p">
-                また、速度制限にかからない「no
-                limit」プランを利用することで、通信にかかわるストレスを解消します。
-              </Thx>
+            <div className="font-pq">
+              <h2>個人向けサービス</h2>
+              <h3>net value</h3>
+              <h3>プロバイダサービス</h3>
+              <h3>p q ひかり</h3>
+              <h3>p q ひかり電話</h3>
             </div>
           </div>
         </div>

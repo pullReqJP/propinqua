@@ -14,11 +14,12 @@ export default function Home() {
           src="/img/20200611_00.jpg"
           alt="top_before"
         />
-        <img
-          className="absolute top-0 left-0 opacity-0 transition duration-700 hover:opacity-100 ease-in-out"
-          src="/img/20200611_01.jpg"
-          alt="top_after"
-        />
+        <div className="absolute top-0 left-0 opacity-0 transition duration-700 hover:opacity-100 ease-in-out">
+          <img src="/img/20200611_01.jpg" alt="top_after" />
+          <p className="absolute inset-x-0 top-0 mt-20 font-pq text-center text-white text-xl md:text-5xl">
+            shape your shapless idea.
+          </p>
+        </div>
       </Layout>
     </>
   );

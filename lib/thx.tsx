@@ -8,20 +8,13 @@ export default (props) => {
   // const Tag = props.tag;
   let Thx = props.children;
   const Tag = props.tag ? props.tag : 'p';
+  const Class = props.className ? props.className : '';
+  let key = Thx;
 
-  //欧文の検索（ゼロスペースを含む場合は２文字以上）
-  Thx = reactStringReplace(
-    Thx,
-    /([ !-;=-~p{Ll}p{No}p{S}x{200b}]{2,}|[ !-;=-~p{Ll}p{No}p{S}]+)/giu,
-    // /(t)/giu,
-    (match, i) => (
-      <Fragment key={match + i}>
-        <span className="thx_wao_spc"> </span>
-        <span className="thx_pwid">{match}</span>
-        <span className="thx_wao_spc"> </span>
-      </Fragment>
-    )
-  ); //欧文の検索
+  // 分離禁止の挿入
+  Thx = Thx.replace(/([‘“（〔［｛〈《「『【・：；]+)/giu, '$1\ufeff');
+  Thx = Thx.replace(/([、。，．’”）〕］｝〉》」』】]+)/giu, '\ufeff$1');
+  // console.log(Thx);
 
   //句読点と終わり括弧の検索（後端単数の句読点のみ、ぶら下がり）
   Thx = reactStringReplace(
@@ -113,16 +106,59 @@ export default (props) => {
     </Fragment>
   )); //始め括弧の検索
 
-  // //括弧内の和欧間スペースを除去（禁則対策）
-  // Thx = reactStringReplace(
-  //   Thx,
-  //   /(<span className="thx_opening_mark">[‘“（〔［｛〈《「『【]+<\/span>)(<span className="thx_wao_spc"> <\/span>)/giu,
-  //   (match, i) => {
-  //     console.log(match);
-  //     return <Fragment key={match + i}>{match}</Fragment>;
-  //   }
-  // ); //括弧内の和欧間スペースを除去
+  //欧文の検索（ゼロスペースを含む場合は２文字以上）
+  Thx = reactStringReplace(
+    Thx,
+    /([ !-;=-~p{Ll}p{No}p{S}x{200b}\ufeff]{2,})/giu,
+    // /(t)/giu,
+    (match, i) => {
+      if (
+        // 両端が分離禁止の場合
+        match.substr(0, 1) === '\ufeff' &&
+        match.substr(-1) === '\ufeff'
+      ) {
+        // console.log(match);
+        return (
+          <Fragment key={match + i}>
+            <span className="thx_pwid">{match}</span>
+          </Fragment>
+        );
+      } else if (
+        // 始端が分離禁止の場合
+        match.substr(0, 1) === '\ufeff'
+      ) {
+        return (
+          <Fragment key={match + i}>
+            <span className="thx_pwid">{match}</span>
+            <span className="thx_wao_spc"> </span>
+          </Fragment>
+        );
+      } else if (
+        // 終端が分離禁止の場合
+        match.substr(-1) === '\ufeff'
+      ) {
+        return (
+          <Fragment key={match + i}>
+            <span className="thx_wao_spc"> </span>
+            <span className="thx_pwid">{match}</span>
+          </Fragment>
+        );
+      } else {
+        return (
+          <Fragment key={match + i}>
+            <span className="thx_wao_spc"> </span>
+            <span className="thx_pwid">{match}</span>
+            <span className="thx_wao_spc"> </span>
+          </Fragment>
+        );
+      }
+    }
+  ); //欧文の検索
 
   console.log(Thx);
-  return <Tag>{Thx}</Tag>;
+  return (
+    <Tag key={key} className={Class}>
+      {Thx}
+    </Tag>
+  );
 };
