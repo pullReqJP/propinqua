@@ -34,10 +34,8 @@ export default function service() {
             />
             <div className="font-pq">
               <h2>法人向けサービス</h2>
-              <h3>ソリューション案件（システム受託開発）</h3>
-              <h3>p q ひかり</h3>
-              <h3>p q ひかり電話　officeタイプ</h3>
-              <h3>net value</h3>
+              <h3>ITソリューション</h3>
+              <h3>光インターネットサービス</h3>
               <h3>プロバイダサービス</h3>
               <h3>固定IPサービス</h3>
               <h3>HP作成・リニューアル</h3>
@@ -45,10 +43,8 @@ export default function service() {
             </div>
             <div className="font-pq">
               <h2>個人向けサービス</h2>
-              <h3>net value</h3>
+              <h3>光インターネットサービス</h3>
               <h3>プロバイダサービス</h3>
-              <h3>p q ひかり</h3>
-              <h3>p q ひかり電話</h3>
             </div>
           </div>
         </div>

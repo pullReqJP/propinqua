@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import IconCompany from 'react-svg-loader!./icon_company.svg';
 import IconService from 'react-svg-loader!./icon_service.svg';
+import IconSolution from 'react-svg-loader!./icon_solution.svg';
 import IconHikari from 'react-svg-loader!./icon_hikari.svg';
 import IconContact from 'react-svg-loader!./icon_contact.svg';
 
@@ -72,7 +73,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
       case 'solution':
         icon = (
-          <IconService
+          <IconSolution
             className="m-auto h-full stroke-current stroke-regular"
             width={'1.25rem'}
             height={'1.25rem'}
@@ -245,7 +246,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         <li className="px-4 py-1 menu-icon">
           <Link href="/solution">
             <a className="flex items-center">
-              <IconService
+              <IconSolution
                 className="my-auto mr-1 h-full stroke-current stroke-regular"
                 width={'1.25rem'}
                 height={'1.25rem'}
@@ -256,7 +257,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         </li>
 
         {/* p q ひかり */}
-        <li className="px-4 py-1 menu-icon">
+        {/* <li className="px-4 py-1 menu-icon">
           <Link href="/hikari">
             <a className="flex items-center">
               <IconHikari
@@ -267,7 +268,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
               <span className="pq-text-align">p q ひかり</span>
             </a>
           </Link>
-        </li>
+        </li> */}
 
         {/* コンタクト */}
         <li className="px-4 py-1 menu-icon">
@@ -278,7 +279,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                 width={'1.25rem'}
                 height={'1.25rem'}
               />
-              <span className="pq-text-align">コンタクト</span>
+              <span className="pq-text-align">contact</span>
             </a>
           </Link>
         </li>
@@ -303,7 +304,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
               <this.Menu name="company" />
               <this.Menu name="service" />
               <this.Menu name="solution" />
-              <this.Menu name="hikari" />
+              {/* <this.Menu name="hikari" /> */}
               <this.Menu name="contact" />
             </div>
           </li>
