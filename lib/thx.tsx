@@ -36,7 +36,7 @@ function extractString(obj, i) {
       switch (typeof child) {
         // リテラルを組版処理
         case 'string':
-          return typeSet(child, i + '-' + j);
+          return typeSet(child, i);
           break;
 
         // タグは再帰
@@ -103,7 +103,7 @@ function typeSet(child, i): JSX.Element {
         // 分離禁止を削除
         match = match.replace(/(\ufeff+)/giu, '');
         return (
-          <Fragment key={match + i + '-' + j}>
+          <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_pwid">{match}</span>
           </Fragment>
         );
@@ -114,7 +114,7 @@ function typeSet(child, i): JSX.Element {
         // 分離禁止を削除
         match = match.replace(/(\ufeff+)/giu, '');
         return (
-          <Fragment key={match + i + '-' + j}>
+          <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_pwid">{match}</span>
             <span className="thx_wao_spc"> </span>
           </Fragment>
@@ -126,7 +126,7 @@ function typeSet(child, i): JSX.Element {
         // 分離禁止を削除
         match = match.replace(/(\ufeff+)/giu, '');
         return (
-          <Fragment key={match + i + '-' + j}>
+          <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_wao_spc"> </span>
             <span className="thx_pwid">{match}</span>
           </Fragment>
@@ -135,7 +135,7 @@ function typeSet(child, i): JSX.Element {
         // 分離禁止を削除
         match = match.replace(/(\ufeff+)/giu, '');
         return (
-          <Fragment key={match + i + '-' + j}>
+          <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_wao_spc"> </span>
             <span className="thx_pwid">{match}</span>
             <span className="thx_wao_spc"> </span>
@@ -248,11 +248,5 @@ function typeSet(child, i): JSX.Element {
   ); //句読点と終わり括弧の検索
 
   // console.log(Thx);
-  return (
-    <Fragment
-    // key={Thx}
-    >
-      {Thx}
-    </Fragment>
-  );
+  return Thx;
 }
