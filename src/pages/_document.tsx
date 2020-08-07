@@ -32,6 +32,7 @@ class MyDocument extends Document<Props> {
     return (
       <Html lang="ja">
         <Head>
+          <link rel="canonical" href={'https://p-req.com/' + pageName} />
           <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
           {this.props.styleTags}
           <link rel="icon" href="/favicon.ico" />
