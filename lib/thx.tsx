@@ -160,9 +160,7 @@ function typeSet(child, i): JSX.Element {
       // 複数の場合
       return (
         <Fragment key={match + i + '-' + j}>
-          <span className="thx_clps_spc"> </span>
           <span className="thx_mid_dot thx_halt">{match}</span>
-          <span className="thx_clps_spc"> </span>
         </Fragment>
       );
     }
