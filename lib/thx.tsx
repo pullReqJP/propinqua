@@ -88,43 +88,114 @@ function typeSet(child, i): JSX.Element {
   Thx = Thx.replace(/[\u2005\u2008]\ufeff/giu, '\ufeff');
   Thx = Thx.replace(/\ufeff[\u2005\u2008]/giu, '\ufeff');
 
-  //欧文の検索（ゼロスペースを含む場合は２文字以上）
+  //欧文の検索
+  // 両端が分離禁止の場合
   Thx = reactStringReplace(
     Thx,
-    /([ !-;=-~p{Ll}p{No}p{S}x{200b}\u2005\ufeff]{2,})/giu,
+    /(\ufeff[ !-;=-~p{Ll}p{No}p{S}x{200b}\u2005]{2,}\ufeff)/giu,
     (match, j) => {
       // 和欧間スペースを削除
       match = match.replace(/(\u2005+)/giu, '');
-      if (
-        // 両端が分離禁止の場合
-        match.substr(0, 1) === '\ufeff' &&
-        match.substr(-1) === '\ufeff'
-      ) {
-        // 分離禁止を削除
-        match = match.replace(/(\ufeff+)/giu, '');
+      // 分離禁止を削除
+      match = match.replace(/(\ufeff+)/giu, '');
+      return (
+        <Fragment key={match + '-' + i + '-' + j}>
+          <span className="thx_pwid">{match}</span>
+        </Fragment>
+      );
+    }
+  ); // 両端が分離禁止の場合
+
+  // 始端が分離禁止の場合
+  Thx = reactStringReplace(
+    Thx,
+    /(\ufeff[ !-;=-~p{Ll}p{No}p{S}x{200b}\u2005]{2,}\u2008?)/giu,
+    (match, j) => {
+      // 和欧間スペースを削除
+      match = match.replace(/(\u2005+)/giu, '');
+      // 分離禁止を削除
+      match = match.replace(/(\ufeff+)/giu, '');
+      // 終端が相殺スペースの場合
+      if (match.substr(-1) === '\u2008') {
+        // 相殺スペースを削除
+        match = match.replace(/(\u2008+)/giu, '');
         return (
           <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_pwid">{match}</span>
           </Fragment>
         );
-      } else if (
-        // 始端が分離禁止の場合
-        match.substr(0, 1) === '\ufeff'
-      ) {
-        // 分離禁止を削除
-        match = match.replace(/(\ufeff+)/giu, '');
+      } else {
         return (
           <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_pwid">{match}</span>
             <span className="thx_wao_spc"> </span>
           </Fragment>
         );
-      } else if (
-        // 終端が分離禁止の場合
-        match.substr(-1) === '\ufeff'
-      ) {
-        // 分離禁止を削除
-        match = match.replace(/(\ufeff+)/giu, '');
+      }
+    }
+  ); // 始端が分離禁止の場合
+
+  // 終端が分離禁止の場合
+  Thx = reactStringReplace(
+    Thx,
+    /(\u2008?[ !-;=-~p{Ll}p{No}p{S}x{200b}\u2005]{2,}\ufeff)/giu,
+    (match, j) => {
+      // 和欧間スペースを削除
+      match = match.replace(/(\u2005+)/giu, '');
+      // 分離禁止を削除
+      match = match.replace(/(\ufeff+)/giu, '');
+      // 始端が相殺スペースの場合
+      if (match.substr(0, 1) === '\u2008') {
+        // 相殺スペースを削除
+        match = match.replace(/(\u2008+)/giu, '');
+        return (
+          <Fragment key={match + '-' + i + '-' + j}>
+            <span className="thx_pwid">{match}</span>
+          </Fragment>
+        );
+      } else {
+        return (
+          <Fragment key={match + '-' + i + '-' + j}>
+            <span className="thx_wao_spc"> </span>
+            <span className="thx_pwid">{match}</span>
+          </Fragment>
+        );
+      }
+    }
+  ); // 終端が分離禁止の場合
+
+  // 分離禁止を伴わない場合
+  Thx = reactStringReplace(
+    Thx,
+    /(\u2008?[ !-;=-~p{Ll}p{No}p{S}x{200b}\u2005]{2,}\u2008?)/giu,
+    (match, j) => {
+      // 和欧間スペースを削除
+      match = match.replace(/(\u2005+)/giu, '');
+      // 両端が相殺スペースの場合
+      if (match.substr(0, 1) === '\u2008' && match.substr(-1) === '\u2008') {
+        // 相殺スペースを削除
+        match = match.replace(/(\u2008+)/giu, '');
+        return (
+          <Fragment key={match + '-' + i + '-' + j}>
+            <span className="thx_pwid">{match}</span>
+          </Fragment>
+        );
+      }
+      // 始端が相殺スペースの場合
+      else if (match.substr(0, 1) === '\u2008') {
+        // 相殺スペースを削除
+        match = match.replace(/(\u2008+)/giu, '');
+        return (
+          <Fragment key={match + '-' + i + '-' + j}>
+            <span className="thx_pwid">{match}</span>
+            <span className="thx_wao_spc"> </span>
+          </Fragment>
+        );
+      }
+      // 終端が相殺スペースの場合
+      else if (match.substr(-1) === '\u2008') {
+        // 相殺スペースを削除
+        match = match.replace(/(\u2008+)/giu, '');
         return (
           <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_wao_spc"> </span>
@@ -132,8 +203,6 @@ function typeSet(child, i): JSX.Element {
           </Fragment>
         );
       } else {
-        // 分離禁止を削除
-        match = match.replace(/(\ufeff+)/giu, '');
         return (
           <Fragment key={match + '-' + i + '-' + j}>
             <span className="thx_wao_spc"> </span>
@@ -143,7 +212,8 @@ function typeSet(child, i): JSX.Element {
         );
       }
     }
-  ); //欧文の検索
+  ); // 分離禁止を伴わない場合
+  //欧文の検索
 
   //中点の検索
   Thx = reactStringReplace(Thx, /(\u2005?[・：；]+\u2005?)/giu, (match, j) => {
